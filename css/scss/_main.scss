@@ -1,0 +1,212 @@
+/*---------------------
+        tab
+---------------------*/
+
+.warpper {
+  position: relative;
+}
+
+.tabs {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  position: fixed;
+  top: 50px;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  background: #fff;
+}
+.tab {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 0px 2px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  text-align: center;
+  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 16px;
+}
+
+.tab span {
+  font-size: 12px;
+  display: block;
+  width: 100%;
+}
+
+.panels {
+  height: auto;
+  margin-top: 150px;
+}
+.panel {
+  display: none;
+  animation: fadein 0.8s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.radio {
+  display: none;
+}
+#tab1:checked ~ .panels #one-panel,
+#tab2:checked ~ .panels #two-panel,
+#tab3:checked ~ .panels #three-panel,
+#tab4:checked ~ .panels #four-panel,
+#tab5:checked ~ .panels #five-panel,
+#tab6:checked ~ .panels #six-panel {
+  display: block;
+}
+#tab1:checked ~ .tabs #one-tab,
+#tab2:checked ~ .tabs #two-tab,
+#tab3:checked ~ .tabs #three-tab,
+#tab4:checked ~ .tabs #four-tab,
+#tab5:checked ~ .tabs #five-tab,
+#tab6:checked ~ .tabs #six-tab {
+  background: #0054ff;
+  color: #fff;
+}
+
+/*---------------------
+        panel
+---------------------*/
+
+.list-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/*.list-cont img {width:100%;}*/
+
+/*.panels {height:1800px;}*/
+
+/* list-cont */
+.list-cont .list-layer {
+  margin-bottom: 50px;
+  /*  position: absolute;*/
+}
+
+.list-cont .list-cont-content {
+  z-index: 100;
+  color: white;
+  background-color: transparent;
+}
+
+/*figure box*/
+
+.panels figure {
+  position: relative;
+}
+.panels figure .bgimg {
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transform: scale(1);
+  transition: transform 0.5s;
+  z-index: 0;
+  display: block;
+}
+.panels figure:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  z-index: 1;
+}
+
+.panels figcaption {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.panels figcaption .textbox {
+  color: #fff;
+  margin: 8% 0;
+  text-align: left;
+  padding-left: 10%;
+}
+.panels figcaption .textbox li {
+  font-weight: 400;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.panels figcaption .textbox h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.panels .number {
+  position: absolute;
+  bottom: -30px;
+  left: -6px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 120px;
+}
+
+.panels .list-cont .list-layer .btn {
+  position: absolute;
+  bottom: 7%;
+  right: 7%;
+  background: #fff;
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 1rem 2rem;
+}
+
+.panels .list-cont .list-layer .ttl {
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.panels .list-cont .list-layer .ttl span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*---------------------
+        detail page---light box
+---------------------*/
+
+.light-box .gallery {
+  column-width: 120px;
+  column-gap: 10px;
+  padding: 20px;
+}
+.light-box .gallery li {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 20px;
+  vertical-align: top;
+}
+.light-box .gallery li img {
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}

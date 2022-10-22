@@ -1,0 +1,108 @@
+/*---------------------
+        footer
+---------------------*/
+footer {
+  border: 1px solid red;
+
+  form {
+    text-align: center;
+    padding: 2rem;
+
+    legend {
+      font-size: 2em;
+      margin-bottom: 2rem;
+    }
+    p.josefin {
+      font-weight: 400;
+      line-height: 1.4rem;
+    }
+    fieldset {
+      text-align: left;
+      margin: 2rem 0;
+
+      .input-box {
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 6px;
+        }
+        input,
+        select,
+        textarea {
+          width: 100%;
+          border: 1px solid $black;
+          border-radius: 5px;
+          font-size: 1em;
+          padding: 5px;
+
+          &:focus {
+            outline: 2px solid $mainColor;
+            border: 1px solid transparent;
+          }
+        }
+
+        textarea {
+          resize: none;
+          height: 20vh;
+        }
+      }
+    }
+  }
+
+  small {
+    display: block;
+    font-size: 0.7rem;
+    background: $mainColor;
+    color: $white;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+//
+// scrolltop
+//
+.scrolltop {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 1030;
+  background: #0054ff;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+  &:hover,
+  &:focus {
+    background: #000;
+    color: #fff;
+  }
+
+  &:hover .material-icons {
+    margin-top: 5px;
+    transition: all 0.5s ease;
+  }
+
+  .material-icons {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    transition: all 0.5s ease;
+  }
+}
+
+//
+//
+//
+@media screen and (min-width: 769px) {
+  footer {
+    form {
+      @include widthSize($ws: 900px);
+    }
+  }
+}

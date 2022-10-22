@@ -1,0 +1,121 @@
+/*---------------------
+        header
+---------------------*/
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #0054ff;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-menu li a:hover {
+  color: #0054ff;
+}
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-logo h1 {
+  font-weight: 400;
+  font-size: 36px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.navbar-logo h2 {
+  display: none;
+}
+
+.navbar-logo a:hover {
+  color: #fff;
+}
+
+.navbar-menu li a {
+  padding: 8px 20px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.navbar-menu li {
+  transition: all 0.5s ease;
+}
+.navbar-menu li:hover {
+  background: #fff;
+  border-radius: 4px;
+}
+
+.navbar-menu {
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.navbar .bars {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: #fff;
+  font-size: 24px;
+}
+.navbar-menu.active {
+  display: flex;
+}
+
+//
+//
+//
+@media screen and (min-width: 769px) {
+  header {
+    // height: 100%;
+    width: 100%;
+    border-right: 1px solid #ccc;
+  }
+
+  header .navbar {
+    padding: 150px 20px 200px 100px;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .navbar-logo h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .navbar-logo h2 {
+    display: block;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .navbar .bars {
+    display: none;
+  }
+  .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 200px;
+  }
+
+  .navbar-menu li a {
+    font-size: 20px;
+  }
+}

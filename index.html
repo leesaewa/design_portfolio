@@ -10,14 +10,9 @@
 
     <title>Design Portfolio | Saewa Lee</title>
 
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- Main stylesheet /-->
 
-    <link rel="stylesheet" href="css/animate.css" />
-
-    <!--web font-->
-    <!--	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">-->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -48,26 +43,27 @@
     </style>
   </head>
   <body id="wrapper">
+    <!-- header -->
     <header>
-      <nav class="navbar">
-        <div class="navbar-logo">
-          <a href="index.html"><h1 class="josefin">lee saewa</h1></a>
-          <h2 class="josefin">Web Designer<br />and<br />Web Publisher.</h2>
-        </div>
+      <div class="main-navbar">
+        <h1 class="josefin">
+          <a href="/index.html">lee saewa</a>
+        </h1>
+        <a href="" class="hamburger-btn">menu</a>
+      </div>
 
-        <!-- <ul class="navbar-menu">
-          <li class="josefin"><a href="practice.html">Personal Projects</a></li>
-          <li class="josefin"><a href="web.html">Web Design</a></li>
-          <li class="josefin"><a href="index.html">LP/Event Design</a></li>
-          <li class="josefin"><a href="detail.html">Detail Page Design</a></li>
-          <li class="josefin"><a href="about.html">about me</a></li>
-        </ul> -->
-
-        <!-- <span class="bars"
-          ><span class="material-icons">density_medium</span></span
-        > -->
+      <nav class="global-nav">
+        <ul class="global-nav__list">
+          <li><a href="/index.html" class="eff">Home</a></li>
+          <li class="sub">
+            <span>Work</span>
+          </li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
       </nav>
     </header>
+    <!-- //header -->
 
     <!--tab-->
     <main id="right">
@@ -81,6 +77,7 @@
           <!--landing page-->
           <section id="three-panel">
             <div class="list-cont">
+              <!--
               <a href="pf4.html" class="list-layer wow fadeInUp">
                 <figure>
                   <img
@@ -628,9 +625,10 @@
                   SPG(ZETT)<span>unlimitiv 신발 특집 페이지</span>
                 </p>
               </a>
+              -->
 
               <!--2020-->
-              <a
+              <!-- <a
                 href="https://shopping.geocities.jp/bellemaison/sale/2020wai/index.html"
                 class="list-layer wow fadeInUp"
                 target="_blank"
@@ -751,7 +749,7 @@
                     >Canadian East 심리스 패딩 자켓 특집 페이지</span
                   >
                 </p>
-              </a>
+              </a> -->
 
               <!--
                         <a href="https://shopping.geocities.jp/spg-sports/lp/logos/index.html" class="list-layer wow fadeInUp" target="_blank">
@@ -773,7 +771,7 @@
                         </a>
 -->
 
-              <a
+              <!-- <a
                 href="https://www.rakuten.ne.jp/gold/bristle-grass/valentine/"
                 class="list-layer wow fadeInUp"
                 target="_blank"
@@ -1048,7 +1046,7 @@
                     >온라인 스토어 매뉴얼 템플릿 디자인</span
                   >
                 </p>
-              </a>
+              </a> -->
 
               <!--2019-->
 
@@ -1072,7 +1070,7 @@
                         </a>
 -->
 
-              <a
+              <!-- <a
                 href="https://www.rakuten.ne.jp/gold/rsswebshop/190712_swim/"
                 class="list-layer wow fadeInUp"
                 target="_blank"
@@ -1196,7 +1194,7 @@
                     페이지</span
                   >
                 </p>
-              </a>
+              </a> -->
 
               <!--2018-->
             </div>
@@ -1209,14 +1207,47 @@
     <!--//tab-->
 
     <footer>
-      <!-- <h2>Contact Me!</h2>
-      <ul>
-        <li>
-          <span class="material-icons">email</span> Mail:
-          <a href="mailto:saewa0424@gmail.com">saewa0424@gmail.com</a>
-        </li>
-        <li><span class="material-icons">call</span> Tel: <a href="tel:010-3157-5676">010-3157-5676</a><span class="alert"> &#8251; 문자와 메일이 조금 더 빠릅니다.</span></li>
-      </ul> -->
+      <form action="https://formspree.io/f/xeqdzvpp" method="POST">
+        <legend class="josefin">Get In Touch</legend>
+        <p class="josefin">
+          Thank you for your interest in getting in touch me. Please send your
+          message here.<br />I will reply as soon as possible!
+        </p>
+        <fieldset>
+          <div class="input-box">
+            <label class="josefin" for="name">Name</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+
+          <div class="input-box">
+            <label class="josefin" for="email">Your email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="input-box">
+            <label class="josefin" for="category">Category</label>
+            <select name="" id="category">
+              <option value="Category Choose">Category Choose</option>
+              <option value="Job Offer">Job Offer</option>
+              <option value="Freelancer Job Offer">Freelancer Job Offer</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <label class="josefin" for="title">Title</label>
+            <input type="text" name="_subject" id="title" required />
+          </div>
+
+          <div class="input-box">
+            <label class="josefin" for="message">Your message</label>
+            <textarea name="message" id="message" required></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="josefin">Send</button>
+      </form>
+
       <small>Copyright &#169; Saewa's Portfolio All Rights Reserved.</small>
     </footer>
 

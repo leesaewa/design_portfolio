@@ -1,0 +1,13 @@
+@mixin flexbox($flexW: nowrap, $flexJC: center, $flexAI: center) {
+  display: flex;
+  flex-wrap: $flexW;
+  justify-content: $flexJC;
+  align-items: $flexAC;
+}
+
+@mixin widthSize($ws: 1200px) {
+  max-width: $ws;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
