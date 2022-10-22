@@ -2,79 +2,110 @@
         header
 ---------------------*/
 header {
+  background-color: $mainColor;
+  color: $white;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 99;
-  background: #0054ff;
+  z-index: 5;
+
+  .main-navbar {
+    @include flexbox($flexJC: space-between);
+    position: relative;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .hamburger-btn {
+    @include flexbox;
+    font-size: 0;
+    position: relative;
+    width: 50px;
+    height: 24px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background-color: $white;
+      position: absolute;
+      right: 0;
+      transition: $cubic;
+    }
+
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+
+    // hamburger button click
+    &.hamburger-btn-open {
+      &::before,
+      &::after {
+        background-color: $black;
+      }
+
+      &::before {
+        transform: rotate(45deg) translate3d(0, -50%, 0);
+        top: 50%;
+      }
+      &::after {
+        transform: rotate(-45deg) translate3d(0, -50%, 0);
+        bottom: 36%;
+      }
+    }
+  }
 }
 
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 8px 12px;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-}
-.navbar-menu li a:hover {
-  color: #0054ff;
-}
-.navbar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.navbar-logo h1 {
-  font-weight: 400;
-  font-size: 36px;
-  text-transform: uppercase;
-  transition: all 0.5s ease;
-}
-
-.navbar-logo h2 {
-  display: none;
-}
-
-.navbar-logo a:hover {
-  color: #fff;
-}
-
-.navbar-menu li a {
-  padding: 8px 20px;
-  display: block;
-  text-transform: uppercase;
-}
-
-.navbar-menu li {
-  transition: all 0.5s ease;
-}
-.navbar-menu li:hover {
-  background: #fff;
-  border-radius: 4px;
-}
-
-.navbar-menu {
-  display: none;
-  flex-wrap: wrap;
-  flex-direction: column;
+.global-nav {
+  @include flexbox;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  text-align: center;
-}
-.navbar .bars {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  color: #fff;
-  font-size: 24px;
-}
-.navbar-menu.active {
-  display: flex;
+  height: 100vh;
+  background-color: $white;
+  z-index: -5;
+  transition: $cubic;
+  transform: translate3d(0, -100%, 0);
+
+  &.global-nav--open {
+    transform: translate3d(0, 0, 0);
+    color: $black;
+
+    .global-nav__list {
+      li {
+        a {
+          transition: $cubic;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  .global-nav__list {
+    @include flexbox($flexW: wrap);
+    width: 100%;
+    padding: 0 2rem;
+
+    li {
+      display: block;
+      font-size: 6em;
+      width: 100%;
+      text-align: center;
+
+      transition: $cubic;
+      transform: translate3d(0, -100%, 0);
+
+      &.sub {
+      }
+    }
+  }
 }
 
 //
@@ -82,40 +113,45 @@ header {
 //
 @media screen and (min-width: 769px) {
   header {
-    // height: 100%;
-    width: 100%;
-    border-right: 1px solid #ccc;
-  }
+    .hamburger-btn {
+      display: none;
+    }
 
-  header .navbar {
-    padding: 150px 20px 200px 100px;
-    justify-content: space-between;
-    height: 100%;
-  }
+    .global-nav__pc {
+      display: block;
+      transform: none;
+      transition: $easefive;
+      position: absolute;
+      right: 2rem;
+      top: 2.4rem;
+      left: auto;
+      background-color: transparent;
+      width: auto;
+      height: auto;
+      z-index: 5;
 
-  .navbar-logo h1 {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-  .navbar-logo h2 {
-    display: block;
-    font-size: 36px;
-    line-height: 50px;
-    font-weight: bold;
-    color: #fff;
-  }
+      .global-nav__list {
+        padding: 0;
 
-  .navbar .bars {
-    display: none;
-  }
-  .navbar-menu {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin-top: 200px;
-  }
+        li {
+          font-size: 1.2em;
+          width: auto;
 
-  .navbar-menu li a {
-    font-size: 20px;
+          &:not(:last-child) {
+            padding-right: 1rem;
+          }
+
+          a {
+            padding: 6px 10px;
+
+            &:hover {
+              background-color: $white;
+              color: $mainColor;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
   }
 }

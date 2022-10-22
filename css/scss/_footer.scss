@@ -2,10 +2,9 @@
         footer
 ---------------------*/
 footer {
-  border: 1px solid red;
+  text-align: center;
 
   form {
-    text-align: center;
     padding: 2rem;
 
     legend {
@@ -58,7 +57,6 @@ footer {
     background: $mainColor;
     color: $white;
     padding: 20px;
-    text-align: center;
   }
 }
 

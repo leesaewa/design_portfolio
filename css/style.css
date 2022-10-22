@@ -1,15 +1,15 @@
 /*font*/
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&display=swap");
-/*@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;600;700;800&display=swap');*/
 @import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;600;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
-html, body {
+html,
+body {
   font-size: 100%;
-  font: 18px/30px 'Noto Sans KR', sans-serif;
-  /*    scroll-behavior: smooth;*/
+  font: 18px/30px "Noto Sans KR", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .josefin {
-  font-family: 'Josefin Sans', 'sans-serif';
+  font-family: "Josefin Sans", "sans-serif";
   font-weight: bold;
 }
 
@@ -25,10 +25,86 @@ img {
   vertical-align: bottom;
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
-aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu,
-nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -36,8 +112,17 @@ nav, output, ruby, section, summary, time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu,
-nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -45,7 +130,8 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -96,11 +182,12 @@ summary {
   display: block;
 }
 
-a, a:hover {
+a,
+a:hover {
   color: inherit;
   text-decoration: none;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   outline: 0;
 }
 
@@ -108,138 +195,187 @@ a, a:hover {
         header
 ---------------------*/
 header {
+  background-color: #0054ff;
+  color: #fff;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 99;
-  background: #0054ff;
+  z-index: 5;
 }
 
-.navbar {
+header .main-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+header .hamburger-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0;
+  position: relative;
+  width: 50px;
+  height: 24px;
+  cursor: pointer;
+}
+
+header .hamburger-btn::before, header .hamburger-btn::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+header .hamburger-btn::before {
+  top: 0;
+}
+
+header .hamburger-btn::after {
+  bottom: 0;
+}
+
+header .hamburger-btn.hamburger-btn-open::before, header .hamburger-btn.hamburger-btn-open::after {
+  background-color: #121212;
+}
+
+header .hamburger-btn.hamburger-btn-open::before {
+  -webkit-transform: rotate(45deg) translate3d(0, -50%, 0);
+          transform: rotate(45deg) translate3d(0, -50%, 0);
+  top: 50%;
+}
+
+header .hamburger-btn.hamburger-btn-open::after {
+  -webkit-transform: rotate(-45deg) translate3d(0, -50%, 0);
+          transform: rotate(-45deg) translate3d(0, -50%, 0);
+  bottom: 36%;
+}
+
+.global-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: -5;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+.global-nav.global-nav--open {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  color: #121212;
+}
+
+.global-nav.global-nav--open .global-nav__list li a {
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.global-nav .global-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 8px 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 2rem;
 }
 
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar-menu li a:hover {
-  color: #0054ff;
-}
-
-.navbar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.navbar-logo h1 {
-  font-weight: 400;
-  font-size: 36px;
-  text-transform: uppercase;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.navbar-logo h2 {
-  display: none;
-}
-
-.navbar-logo a:hover {
-  color: #fff;
-}
-
-.navbar-menu li a {
-  padding: 8px 20px;
+.global-nav .global-nav__list li {
   display: block;
-  text-transform: uppercase;
-}
-
-.navbar-menu li {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-.navbar-menu li:hover {
-  background: #fff;
-  border-radius: 4px;
-}
-
-.navbar-menu {
-  display: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  font-size: 6em;
   width: 100%;
   text-align: center;
-}
-
-.navbar .bars {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  color: #fff;
-  font-size: 24px;
-}
-
-.navbar-menu.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
 }
 
 @media screen and (min-width: 769px) {
-  header {
-    width: 100%;
-    border-right: 1px solid #ccc;
-  }
-  header .navbar {
-    padding: 150px 20px 200px 100px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 100%;
-  }
-  .navbar-logo h1 {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-  .navbar-logo h2 {
-    display: block;
-    font-size: 36px;
-    line-height: 50px;
-    font-weight: bold;
-    color: #fff;
-  }
-  .navbar .bars {
+  header .hamburger-btn {
     display: none;
   }
-  .navbar-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 200px;
+  header .global-nav__pc {
+    display: block;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: absolute;
+    right: 2rem;
+    top: 2.4rem;
+    left: auto;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    z-index: 5;
   }
-  .navbar-menu li a {
-    font-size: 20px;
+  header .global-nav__pc .global-nav__list {
+    padding: 0;
+  }
+  header .global-nav__pc .global-nav__list li {
+    font-size: 1.2em;
+    width: auto;
+  }
+  header .global-nav__pc .global-nav__list li:not(:last-child) {
+    padding-right: 1rem;
+  }
+  header .global-nav__pc .global-nav__list li a {
+    padding: 6px 10px;
+  }
+  header .global-nav__pc .global-nav__list li a:hover {
+    background-color: #fff;
+    color: #0054ff;
+    border-radius: 5px;
   }
 }
 
@@ -498,11 +634,10 @@ header {
         footer
 ---------------------*/
 footer {
-  border: 1px solid red;
+  text-align: center;
 }
 
 footer form {
-  text-align: center;
   padding: 2rem;
 }
 
@@ -558,7 +693,6 @@ footer small {
   background: #0054ff;
   color: #fff;
   padding: 20px;
-  text-align: center;
 }
 
 .scrolltop {

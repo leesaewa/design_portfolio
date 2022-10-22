@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: $flexW;
   justify-content: $flexJC;
-  align-items: $flexAC;
+  align-items: $flexAI;
 }
 
 @mixin widthSize($ws: 1200px) {

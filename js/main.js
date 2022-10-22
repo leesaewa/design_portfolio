@@ -23,22 +23,22 @@ jQuery(document).ready(function () {
 });
 
 // scroll header fixed
-const header = document.querySelector("header");
-const headerHeight = header.offsetHeight;
-// scroll top
-const topBtn = document.querySelector(".floating-nav__top");
+// const header = document.querySelector("header");
+// const headerHeight = header.offsetHeight;
+// // scroll top
+// const topBtn = document.querySelector(".floating-nav__top");
 
-// window가 스크롤 될 때 발생
-window.addEventListener("scroll", () => {
-  // header의 사이즈보다 스크롤한 값이 크거나 같을 때 실행
-  if (window.scrollY >= headerHeight) {
-    header.classList.add("fixed");
-    topBtn.style.opacity = "1";
-  } else {
-    header.classList.remove("fixed");
-    topBtn.style.opacity = "0";
-  }
-});
+// // window가 스크롤 될 때 발생
+// window.addEventListener("scroll", () => {
+//   // header의 사이즈보다 스크롤한 값이 크거나 같을 때 실행
+//   if (window.scrollY >= headerHeight) {
+//     header.classList.add("fixed");
+//     topBtn.style.opacity = "1";
+//   } else {
+//     header.classList.remove("fixed");
+//     topBtn.style.opacity = "0";
+//   }
+// });
 
 // global nav
 const navBtn = document.querySelector(".hamburger-btn");
