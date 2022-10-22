@@ -379,13 +379,13 @@ header .hamburger-btn.hamburger-btn-open::after {
   }
 }
 
+#work {
+  margin-top: 5em;
+}
+
 /*---------------------
         tab
 ---------------------*/
-.warpper {
-  position: relative;
-}
-
 .tabs {
   white-space: nowrap;
   overflow-x: scroll;
@@ -499,8 +499,6 @@ header .hamburger-btn.hamburger-btn-open::after {
   margin: 20px;
 }
 
-/*.list-cont img {width:100%;}*/
-/*.panels {height:1800px;}*/
 /* list-cont */
 .list-cont .list-layer {
   margin-bottom: 50px;
@@ -753,6 +751,7 @@ footer small {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  border: 1px solid red;
 }
 
 .ttl {
@@ -804,20 +803,9 @@ button:hover {
   .panels .list-cont .list-layer {
     width: 48%;
   }
-  /*
-    .light-box .gallery li {
-        width:33.3%
-    }
-*/
   .light-box .gallery {
     -webkit-column-width: 300px;
             column-width: 300px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  #right {
-    margin-left: 510px;
   }
 }
 
@@ -882,9 +870,6 @@ button:hover {
 @media screen and (min-width: 1025px) {
   .list-cont {
     margin: 0;
-  }
-  .panels {
-    margin: 150px 100px 100px 0;
   }
   .tabs {
     right: 100px;

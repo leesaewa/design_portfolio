@@ -14,10 +14,8 @@
 }
 
 .row {
-  max-width: 1500px;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
+  @include widthSize($ws: 1500px);
+  border: 1px solid red;
 }
 
 .ttl {
@@ -69,19 +67,8 @@ button {
     width: 48%;
   }
 
-  /*
-    .light-box .gallery li {
-        width:33.3%
-    }
-*/
-
   .light-box .gallery {
     column-width: 300px;
-  }
-}
-@media screen and (min-width: 769px) {
-  #right {
-    margin-left: 510px;
   }
 }
 
@@ -146,9 +133,7 @@ button {
   .list-cont {
     margin: 0;
   }
-  .panels {
-    margin: 150px 100px 100px 0;
-  }
+
   .tabs {
     right: 100px;
     transition: all 0.5s ease;
