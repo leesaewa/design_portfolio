@@ -7,104 +7,51 @@ main {
 //
 #main {
   border: 1px solid red;
-  padding: 2rem;
+  @include widthSize($ws: 90%);
 
   .visual-wrap {
     .visual-wrap__text {
       h2 {
+        font-size: 2em;
+        line-height: 1.4em;
+
         span {
+          display: block;
         }
       }
       p {
+        padding: 1.4rem 0 2rem;
+        text-align: left;
+      }
+
+      .btn-box {
+        a:last-child {
+          margin-top: 5px;
+          background-color: $white;
+          color: $mainColor;
+          border: 1px solid $mainColor;
+
+          &:hover {
+            background-color: $mainColor;
+            color: $white;
+          }
+        }
       }
     }
 
     .visual-wrap__box {
-      rect {
-        width: 100px;
-        height: 100px;
-        fill: red;
-        stroke: $black;
-        stroke-width: 10;
+      margin-top: 2rem;
+      li {
+        img {
+          border-radius: 2rem;
+        }
+      }
+
+      svg {
+        display: none;
       }
     }
   }
-}
-
-/*---------------------
-        tab
----------------------*/
-
-.tabs {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  display: flex;
-  position: fixed;
-  top: 50px;
-  right: 0;
-  width: 100%;
-  z-index: 9;
-  background: #fff;
-}
-.tab {
-  cursor: pointer;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  margin: 0px 2px;
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
-  text-align: center;
-  display: inline-block;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  line-height: 16px;
-}
-
-.tab span {
-  font-size: 12px;
-  display: block;
-  width: 100%;
-}
-
-.panels {
-  height: auto;
-  margin-top: 150px;
-}
-.panel {
-  display: none;
-  animation: fadein 0.8s;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.radio {
-  display: none;
-}
-#tab1:checked ~ .panels #one-panel,
-#tab2:checked ~ .panels #two-panel,
-#tab3:checked ~ .panels #three-panel,
-#tab4:checked ~ .panels #four-panel,
-#tab5:checked ~ .panels #five-panel,
-#tab6:checked ~ .panels #six-panel {
-  display: block;
-}
-#tab1:checked ~ .tabs #one-tab,
-#tab2:checked ~ .tabs #two-tab,
-#tab3:checked ~ .tabs #three-tab,
-#tab4:checked ~ .tabs #four-tab,
-#tab5:checked ~ .tabs #five-tab,
-#tab6:checked ~ .tabs #six-tab {
-  background: #0054ff;
-  color: #fff;
 }
 
 /*---------------------
@@ -234,4 +181,60 @@ main {
 .light-box .gallery li img {
   border-radius: 20px;
   border: 1px solid #ccc;
+}
+
+//
+// responsive
+//
+@media screen and (min-width: 769px) {
+  #main {
+    border: 1px solid red;
+    padding: 2rem;
+
+    .visual-wrap {
+      .visual-wrap__text {
+        text-align: left;
+
+        h2 {
+          font-size: 2em;
+          line-height: 1.4em;
+
+          span {
+            display: block;
+          }
+        }
+        p {
+          padding: 1.4rem 0 2rem;
+        }
+
+        .btn-box {
+          @include flexbox($flexJC: flex-start);
+
+          a:last-child {
+            margin-top: 0;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .visual-wrap__box {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .visual-wrap__box {
+    svg {
+      display: block;
+
+      rect {
+        width: 100px;
+        height: 100px;
+        fill: red;
+        stroke: $black;
+        stroke-width: 10;
+      }
+    }
+  }
 }

@@ -191,6 +191,15 @@ a:hover {
   outline: 0;
 }
 
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.6rem;
+}
+
 /*---------------------
         header
 ---------------------*/
@@ -385,116 +394,48 @@ main {
 
 #main {
   border: 1px solid red;
-  padding: 2rem;
-}
-
-#main .visual-wrap .visual-wrap__box rect {
-  width: 100px;
-  height: 100px;
-  fill: red;
-  stroke: #121212;
-  stroke-width: 10;
-}
-
-/*---------------------
-        tab
----------------------*/
-.tabs {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  top: 50px;
-  right: 0;
+  max-width: 90%;
   width: 100%;
-  z-index: 9;
-  background: #fff;
-}
-
-.tab {
-  cursor: pointer;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  margin: 0px 2px;
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
+  margin: 0 auto;
   text-align: center;
-  display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  line-height: 16px;
 }
 
-.tab span {
-  font-size: 12px;
-  display: block;
-  width: 100%;
+#main .visual-wrap .visual-wrap__text h2 {
+  font-size: 2em;
+  line-height: 1.4em;
 }
 
-.panels {
-  height: auto;
-  margin-top: 150px;
-}
-
-.panel {
-  display: none;
-  -webkit-animation: fadein 0.8s;
-          animation: fadein 0.8s;
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.radio {
-  display: none;
-}
-
-#tab1:checked ~ .panels #one-panel,
-#tab2:checked ~ .panels #two-panel,
-#tab3:checked ~ .panels #three-panel,
-#tab4:checked ~ .panels #four-panel,
-#tab5:checked ~ .panels #five-panel,
-#tab6:checked ~ .panels #six-panel {
+#main .visual-wrap .visual-wrap__text h2 span {
   display: block;
 }
 
-#tab1:checked ~ .tabs #one-tab,
-#tab2:checked ~ .tabs #two-tab,
-#tab3:checked ~ .tabs #three-tab,
-#tab4:checked ~ .tabs #four-tab,
-#tab5:checked ~ .tabs #five-tab,
-#tab6:checked ~ .tabs #six-tab {
-  background: #0054ff;
+#main .visual-wrap .visual-wrap__text p {
+  padding: 1.4rem 0 2rem;
+  text-align: left;
+}
+
+#main .visual-wrap .visual-wrap__text .btn-box a:last-child {
+  margin-top: 5px;
+  background-color: #fff;
+  color: #0054ff;
+  border: 1px solid #0054ff;
+}
+
+#main .visual-wrap .visual-wrap__text .btn-box a:last-child:hover {
+  background-color: #0054ff;
   color: #fff;
+}
+
+#main .visual-wrap .visual-wrap__box {
+  margin-top: 2rem;
+}
+
+#main .visual-wrap .visual-wrap__box li img {
+  border-radius: 2rem;
+}
+
+#main .visual-wrap .visual-wrap__box svg {
+  display: none;
 }
 
 /*---------------------
@@ -639,6 +580,56 @@ main {
 .light-box .gallery li img {
   border-radius: 20px;
   border: 1px solid #ccc;
+}
+
+@media screen and (min-width: 769px) {
+  #main {
+    border: 1px solid red;
+    padding: 2rem;
+  }
+  #main .visual-wrap .visual-wrap__text {
+    text-align: left;
+  }
+  #main .visual-wrap .visual-wrap__text h2 {
+    font-size: 2em;
+    line-height: 1.4em;
+  }
+  #main .visual-wrap .visual-wrap__text h2 span {
+    display: block;
+  }
+  #main .visual-wrap .visual-wrap__text p {
+    padding: 1.4rem 0 2rem;
+  }
+  #main .visual-wrap .visual-wrap__text .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main .visual-wrap .visual-wrap__text .btn-box a:last-child {
+    margin-top: 0;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .visual-wrap__box svg {
+    display: block;
+  }
+  .visual-wrap__box svg rect {
+    width: 100px;
+    height: 100px;
+    fill: red;
+    stroke: #121212;
+    stroke-width: 10;
+  }
 }
 
 /*---------------------
