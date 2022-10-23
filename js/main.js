@@ -52,6 +52,12 @@ const slides = document.querySelectorAll(".slides li");
 const numOfSlide = slides.length;
 let slideNum = 0;
 
+let random = () => {
+  const randomSlides = Math.floor(Math.random() * numOfSlide);
+  eventHandler(randomSlides);
+  console.log("random", randomSlides);
+};
+
 function eventHandler() {
   slides.forEach((slide) => {
     slide.classList.remove("active");
@@ -68,9 +74,7 @@ function eventHandler() {
 
 let autoPlay;
 let repeater = () => {
-  let randomSlides = slides[Math.floor(Math.random() * numOfSlide)];
-  eventHandler(randomSlides);
-  autoPlay = setInterval("eventHandler()", 2000);
+  autoPlay = setInterval("random()", 2000);
 };
 
 repeater();
