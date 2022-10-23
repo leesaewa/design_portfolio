@@ -50,31 +50,28 @@ navBtn.addEventListener("click", (e) => {
 // slider
 const slides = document.querySelectorAll(".slides li");
 const numOfSlide = slides.length;
-let slideNum = 0;
-
-let random = () => {
-  const randomSlides = Math.floor(Math.random() * numOfSlide);
-  eventHandler(randomSlides);
-  console.log("random", randomSlides);
-};
 
 function eventHandler() {
+  let randomSlides = Math.floor(Math.random() * numOfSlide);
+
   slides.forEach((slide) => {
     slide.classList.remove("active");
   });
 
-  slideNum++;
+  randomSlides++;
 
-  if (slideNum > numOfSlide - 1) {
-    slideNum = 0;
+  if (randomSlides > numOfSlide - 1) {
+    randomSlides = 0;
   }
 
-  slides[slideNum].classList.add("active");
+  slides[randomSlides].classList.add("active");
+  console.log("random", randomSlides);
 }
 
 let autoPlay;
 let repeater = () => {
-  autoPlay = setInterval("random()", 2000);
+  autoPlay = setInterval("eventHandler()", 2000);
 };
 
+eventHandler();
 repeater();
