@@ -379,8 +379,21 @@ header .hamburger-btn.hamburger-btn-open::after {
   }
 }
 
-#work {
+main {
   margin-top: 5em;
+}
+
+#main {
+  border: 1px solid red;
+  padding: 2rem;
+}
+
+#main .visual-wrap .visual-wrap__box rect {
+  width: 100px;
+  height: 100px;
+  fill: red;
+  stroke: #121212;
+  stroke-width: 10;
 }
 
 /*---------------------
@@ -787,6 +800,24 @@ button {
 }
 
 button:hover {
+  background-color: #fff;
+  color: #0054ff;
+}
+
+.btn-box .btn {
+  display: block;
+  background-color: #0054ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #0054ff;
+  padding: 8px 10px 8px;
+  font-size: 1em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.btn-box .btn:hover {
   background-color: #fff;
   color: #0054ff;
 }

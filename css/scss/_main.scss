@@ -1,5 +1,34 @@
-#work {
+main {
   margin-top: 5em;
+}
+
+//
+// main visual
+//
+#main {
+  border: 1px solid red;
+  padding: 2rem;
+
+  .visual-wrap {
+    .visual-wrap__text {
+      h2 {
+        span {
+        }
+      }
+      p {
+      }
+    }
+
+    .visual-wrap__box {
+      rect {
+        width: 100px;
+        height: 100px;
+        fill: red;
+        stroke: $black;
+        stroke-width: 10;
+      }
+    }
+  }
 }
 
 /*---------------------
