@@ -23,7 +23,12 @@ jQuery(document).ready(function () {
 });
 
 //
+// *********************************
+//        vanilla javascript
+// *********************************
+//
 // global nav
+const body = document.querySelector("body");
 const navBtn = document.querySelector(".hamburger-btn");
 const globalnav = document.querySelector(".global-nav");
 
@@ -40,3 +45,32 @@ navBtn.addEventListener("click", (e) => {
     body.style.overflowY = "auto";
   }
 });
+
+//
+// slider
+const slides = document.querySelectorAll(".slides li");
+const numOfSlide = slides.length;
+let slideNum = 0;
+
+function eventHandler() {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+
+  slideNum++;
+
+  if (slideNum > numOfSlide - 1) {
+    slideNum = 0;
+  }
+
+  slides[slideNum].classList.add("active");
+}
+
+let autoPlay;
+let repeater = () => {
+  let randomSlides = slides[Math.floor(Math.random() * numOfSlide)];
+  eventHandler(randomSlides);
+  autoPlay = setInterval("eventHandler()", 2000);
+};
+
+repeater();

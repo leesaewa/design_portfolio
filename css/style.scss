@@ -15,7 +15,6 @@
 
 .row {
   @include widthSize($ws: 1500px);
-  border: 1px solid red;
 }
 
 .ttl {
@@ -65,6 +64,7 @@ button {
     padding: 8px 10px 8px;
     font-size: 1em;
     transition: $easefive;
+    font-weight: 400;
 
     &:hover {
       background-color: $white;

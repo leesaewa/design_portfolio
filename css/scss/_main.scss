@@ -6,7 +6,6 @@ main {
 // main visual
 //
 #main {
-  border: 1px solid red;
   @include widthSize($ws: 90%);
 
   .visual-wrap {
@@ -22,6 +21,7 @@ main {
       p {
         padding: 1.4rem 0 2rem;
         text-align: left;
+        font-weight: 400;
       }
 
       .btn-box {
@@ -46,17 +46,30 @@ main {
         overflow: hidden;
         border-radius: 2rem;
 
+        &.slides {
+          position: relative;
+          min-height: 50vh;
+        }
+
         li {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          opacity: 0;
+          visibility: hidden;
+          transition: $easefive;
+
+          &.active {
+            opacity: 1;
+            visibility: visible;
+          }
+
           img {
             width: 100%;
             height: 50vh;
             object-fit: cover;
           }
         }
-      }
-
-      svg {
-        display: none;
       }
     }
   }
@@ -207,7 +220,7 @@ main {
           font-size: 3em;
         }
         p {
-          padding-right: 2rem;
+          padding: 1.4rem 2rem 3rem 0;
         }
 
         .btn-box {
@@ -238,26 +251,19 @@ main {
       padding: 5rem;
 
       .visual-wrap__text {
-        width: 100%;
-
         h2 {
-          text-align: left;
-          font-size: 3em;
+          font-size: 4.6em;
         }
+
         p {
-          padding-right: 2rem;
+          font-size: 1.2em;
         }
 
         .btn-box {
-          @include flexbox($flexJC: flex-start);
-
           a {
-            width: 30%;
-
-            &:last-child {
-              margin-top: 0;
-              margin-left: 5px;
-            }
+            width: 40%;
+            padding: 1.2rem 0;
+            font-size: 1.2em;
           }
         }
       }
@@ -269,8 +275,6 @@ main {
           position: absolute;
           width: 120px;
           height: 120px;
-          // border: 1px solid red;
-          // background-color: #ccc;
           border-radius: 14px;
 
           &:nth-child(1) {

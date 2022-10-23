@@ -70,7 +70,7 @@
             <h2 class="josefin">
               Hi. I'm Saewa. <span class="josefin">A Web designer.</span>
             </h2>
-            <p>
+            <p class="josefin">
               I’m also a Publisher(Markup engineer) and general doodler with a
               keen eye for creating engaging UI, bringing products to life.
             </p>
@@ -86,8 +86,22 @@
             <div class="visual-wrap__box-block"></div>
             <div class="visual-wrap__box-block"></div>
 
-            <ul class="visual-wrap__box-img">
-              <li><img src="img/about/about.jpg" alt="" srcset="" /></li>
+            <ul class="visual-wrap__box-img slides">
+              <li class="active">
+                <img src="img/about/slide01.jpg" alt="" srcset="" />
+              </li>
+              <li>
+                <img src="img/about/slide02.jpg" alt="" srcset="" />
+              </li>
+              <li>
+                <img src="img/about/slide03.jpg" alt="" srcset="" />
+              </li>
+              <li>
+                <img src="img/about/slide04.jpg" alt="" srcset="" />
+              </li>
+              <li>
+                <img src="img/about/slide10.jpg" alt="" srcset="" />
+              </li>
             </ul>
           </div>
         </div>
@@ -1284,17 +1298,5 @@
     >
 
     <script src="js/main.js"></script>
-
-    <script>
-      //각자 ('')에 들어있는 클래스를 가진 태그를 토글
-      const toggleBtn = document.querySelector(".bars");
-      const menu = document.querySelector(".navbar-menu");
-
-      //클릭이 될 때마다 함수를 호출
-      toggleBtn.addEventListener("click", () => {
-        //클릭할 때 클래스 추가/제거
-        menu.classList.toggle("active");
-      });
-    </script>
   </body>
 </html>

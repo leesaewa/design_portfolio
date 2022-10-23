@@ -393,7 +393,6 @@ main {
 }
 
 #main {
-  border: 1px solid red;
   max-width: 90%;
   width: 100%;
   margin: 0 auto;
@@ -412,6 +411,7 @@ main {
 #main .visual-wrap .visual-wrap__text p {
   padding: 1.4rem 0 2rem;
   text-align: left;
+  font-weight: 400;
 }
 
 #main .visual-wrap .visual-wrap__text .btn-box a:last-child {
@@ -435,15 +435,31 @@ main {
   border-radius: 2rem;
 }
 
+#main .visual-wrap .visual-wrap__box .visual-wrap__box-img.slides {
+  position: relative;
+  min-height: 50vh;
+}
+
+#main .visual-wrap .visual-wrap__box .visual-wrap__box-img li {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#main .visual-wrap .visual-wrap__box .visual-wrap__box-img li.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 #main .visual-wrap .visual-wrap__box .visual-wrap__box-img li img {
   width: 100%;
   height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-#main .visual-wrap .visual-wrap__box svg {
-  display: none;
 }
 
 /*---------------------
@@ -612,7 +628,7 @@ main {
     font-size: 3em;
   }
   #main .visual-wrap .visual-wrap__text p {
-    padding-right: 2rem;
+    padding: 1.4rem 2rem 3rem 0;
   }
   #main .visual-wrap .visual-wrap__text .btn-box {
     display: -webkit-box;
@@ -644,35 +660,16 @@ main {
   #main .visual-wrap {
     padding: 5rem;
   }
-  #main .visual-wrap .visual-wrap__text {
-    width: 100%;
-  }
   #main .visual-wrap .visual-wrap__text h2 {
-    text-align: left;
-    font-size: 3em;
+    font-size: 4.6em;
   }
   #main .visual-wrap .visual-wrap__text p {
-    padding-right: 2rem;
-  }
-  #main .visual-wrap .visual-wrap__text .btn-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    font-size: 1.2em;
   }
   #main .visual-wrap .visual-wrap__text .btn-box a {
-    width: 30%;
-  }
-  #main .visual-wrap .visual-wrap__text .btn-box a:last-child {
-    margin-top: 0;
-    margin-left: 5px;
+    width: 40%;
+    padding: 1.2rem 0;
+    font-size: 1.2em;
   }
   #main .visual-wrap .visual-wrap__box {
     position: relative;
@@ -942,7 +939,6 @@ footer small {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  border: 1px solid red;
 }
 
 .ttl {
@@ -993,6 +989,7 @@ button:hover {
   font-size: 1em;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  font-weight: 400;
 }
 
 .btn-box .btn:hover {
