@@ -2,8 +2,8 @@
         header
 ---------------------*/
 header {
-  background-color: $mainColor;
-  color: $white;
+  background-color: $subColor;
+  color: $black;
   position: fixed;
   width: 100%;
   top: 0;
@@ -30,7 +30,7 @@ header {
       content: "";
       width: 100%;
       height: 3px;
-      background-color: $white;
+      background-color: $black;
       position: absolute;
       right: 0;
       transition: $cubic;

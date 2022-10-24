@@ -11,3 +11,26 @@
   margin: 0 auto;
   text-align: center;
 }
+
+@mixin buttonColor() {
+  display: block;
+  background-color: $mainColor;
+  color: $white;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid $mainColor;
+  padding: 8px 10px 8px;
+  font-size: 1em;
+  transition: $easefive;
+}
+
+@mixin buttonHover {
+  background-color: $subColor;
+  color: $mainColor;
+}
+
+@mixin img($imgW: 100%, $imgH: 50vh) {
+  width: $imgW;
+  height: $imgH;
+  object-fit: cover;
+}

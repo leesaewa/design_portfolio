@@ -13,6 +13,10 @@
   color: #fff;
 }
 
+body {
+  background-color: #f4f8ff;
+}
+
 .row {
   @include widthSize($ws: 1500px);
 }
@@ -36,39 +40,42 @@
 }
 
 button {
+  @include buttonColor;
   width: 100%;
-  background-color: $mainColor;
-  color: $white;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid $mainColor;
-  padding: 8px 10px 8px;
-  font-size: 1em;
-  transition: $easefive;
   cursor: pointer;
 
   &:hover {
-    background-color: $white;
-    color: $mainColor;
+    @include buttonHover;
   }
 }
 
 .btn-box {
   .btn {
-    display: block;
-    background-color: $mainColor;
-    color: $white;
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid $mainColor;
-    padding: 8px 10px 8px;
-    font-size: 1em;
-    transition: $easefive;
+    @include buttonColor;
     font-weight: 400;
 
     &:hover {
-      background-color: $white;
-      color: $mainColor;
+      @include buttonHover;
+    }
+  }
+}
+
+//
+// social btn
+//
+.social {
+  @include flexbox();
+  li {
+    a {
+      svg {
+        width: 42px;
+        transition: $easefive;
+      }
+      &:hover {
+        svg {
+          fill: $mainColor;
+        }
+      }
     }
   }
 }

@@ -204,8 +204,8 @@ h6 {
         header
 ---------------------*/
 header {
-  background-color: #0054ff;
-  color: #fff;
+  background-color: #f4f8ff;
+  color: #121212;
   position: fixed;
   width: 100%;
   top: 0;
@@ -253,7 +253,7 @@ header .hamburger-btn::before, header .hamburger-btn::after {
   content: "";
   width: 100%;
   height: 3px;
-  background-color: #fff;
+  background-color: #121212;
   position: absolute;
   right: 0;
   -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -404,10 +404,6 @@ main {
   line-height: 1.4em;
 }
 
-#main .visual-wrap .visual-wrap__text h2 span {
-  display: block;
-}
-
 #main .visual-wrap .visual-wrap__text p {
   padding: 1.4rem 0 2rem;
   text-align: left;
@@ -416,7 +412,7 @@ main {
 
 #main .visual-wrap .visual-wrap__text .btn-box a:last-child {
   margin-top: 5px;
-  background-color: #fff;
+  background-color: #f4f8ff;
   color: #0054ff;
   border: 1px solid #0054ff;
 }
@@ -456,6 +452,37 @@ main {
 }
 
 #main .visual-wrap .visual-wrap__box .visual-wrap__box-img li img {
+  width: 100%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#about {
+  margin: 5em auto;
+  padding: 5em 0;
+  background-color: #fff;
+}
+
+#about .about-wrap {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#about .about-wrap .about-wrap__text p {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+#about .about-wrap .about-wrap__img {
+  margin-top: 2rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+#about .about-wrap .about-wrap__img img {
   width: 100%;
   height: 50vh;
   -o-object-fit: cover;
@@ -627,6 +654,9 @@ main {
     text-align: left;
     font-size: 3em;
   }
+  #main .visual-wrap .visual-wrap__text span {
+    display: block;
+  }
   #main .visual-wrap .visual-wrap__text p {
     padding: 1.4rem 2rem 3rem 0;
   }
@@ -725,6 +755,57 @@ main {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+  }
+  #about {
+    margin: 5em auto;
+    padding: 5em 0;
+  }
+  #about .about-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    max-width: 1540px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #about .about-wrap .about-wrap__text {
+    width: 50%;
+    text-align: left;
+  }
+  #about .about-wrap .about-wrap__text h3 span {
+    display: block;
+  }
+  #about .about-wrap .about-wrap__text p {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  #about .about-wrap .about-wrap__text .social {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #about .about-wrap .about-wrap__img {
+    margin-top: 0;
+    width: 40%;
+  }
+  #about .about-wrap .about-wrap__img img {
+    width: 100%;
+    height: 50vh;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -934,6 +1015,10 @@ footer small {
   color: #fff;
 }
 
+body {
+  background-color: #f4f8ff;
+}
+
 .row {
   max-width: 1500px;
   width: 100%;
@@ -960,7 +1045,7 @@ footer small {
 }
 
 button {
-  width: 100%;
+  display: block;
   background-color: #0054ff;
   color: #fff;
   text-align: center;
@@ -970,11 +1055,12 @@ button {
   font-size: 1em;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  width: 100%;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #fff;
+  background-color: #f4f8ff;
   color: #0054ff;
 }
 
@@ -993,8 +1079,32 @@ button:hover {
 }
 
 .btn-box .btn:hover {
-  background-color: #fff;
+  background-color: #f4f8ff;
   color: #0054ff;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social li a svg {
+  width: 42px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.social li a:hover svg {
+  fill: #0054ff;
 }
 
 /*---------------------
