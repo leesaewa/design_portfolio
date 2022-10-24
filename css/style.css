@@ -184,10 +184,10 @@ summary {
 
 a,
 a:hover {
-  color: inherit;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  color: inherit;
   outline: 0;
 }
 
@@ -211,6 +211,7 @@ header {
   top: 0;
   left: 0;
   z-index: 5;
+  font-family: "Josefin Sans", "sans-serif";
 }
 
 header .main-navbar {
@@ -380,11 +381,21 @@ header .hamburger-btn.hamburger-btn-open::after {
   }
   header .global-nav__pc .global-nav__list li a {
     padding: 6px 10px;
+    position: relative;
   }
-  header .global-nav__pc .global-nav__list li a:hover {
-    background-color: #fff;
-    color: #0054ff;
-    border-radius: 5px;
+  header .global-nav__pc .global-nav__list li a::after {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  header .global-nav__pc .global-nav__list li a:hover::after {
+    width: 100%;
+    height: 15px;
+    background-color: #0054ff;
+    opacity: 0.5;
   }
 }
 
@@ -397,6 +408,10 @@ main {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+
+#main .visual-wrap {
+  height: 90vh;
 }
 
 #main .visual-wrap .visual-wrap__text h2 {
@@ -459,7 +474,7 @@ main {
 }
 
 #about {
-  margin: 5em auto;
+  margin: 0 auto 5em;
   padding: 5em 0;
   background-color: #fff;
 }
@@ -757,8 +772,8 @@ main {
     text-align: center;
   }
   #about {
-    margin: 5em auto;
-    padding: 5em 0;
+    border-top-right-radius: 12em;
+    border-bottom-left-radius: 12em;
   }
   #about .about-wrap {
     display: -webkit-box;
@@ -788,10 +803,6 @@ main {
   #about .about-wrap .about-wrap__text h3 span {
     display: block;
   }
-  #about .about-wrap .about-wrap__text p {
-    margin-bottom: 2rem;
-    text-align: left;
-  }
   #about .about-wrap .about-wrap__text .social {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -800,12 +811,6 @@ main {
   #about .about-wrap .about-wrap__img {
     margin-top: 0;
     width: 40%;
-  }
-  #about .about-wrap .about-wrap__img img {
-    width: 100%;
-    height: 50vh;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 

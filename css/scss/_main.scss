@@ -9,6 +9,8 @@ main {
   @include widthSize($ws: 90%);
 
   .visual-wrap {
+    height: 90vh;
+
     .visual-wrap__text {
       h2 {
         font-size: 2em;
@@ -73,7 +75,7 @@ main {
 // about
 //
 #about {
-  margin: 5em auto;
+  margin: 0 auto 5em;
   padding: 5em 0;
   background-color: $white;
   .about-wrap {
@@ -397,8 +399,8 @@ main {
 
   // about
   #about {
-    margin: 5em auto;
-    padding: 5em 0;
+    border-top-right-radius: 12em;
+    border-bottom-left-radius: 12em;
 
     .about-wrap {
       @include flexbox($flexJC: space-between);
@@ -414,10 +416,6 @@ main {
             display: block;
           }
         }
-        p {
-          margin-bottom: 2rem;
-          text-align: left;
-        }
 
         .social {
           justify-content: flex-start;
@@ -427,10 +425,6 @@ main {
       .about-wrap__img {
         margin-top: 0;
         width: 40%;
-
-        img {
-          @include img();
-        }
       }
     }
   }
