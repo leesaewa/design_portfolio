@@ -602,6 +602,8 @@ main {
 #work .work-wrap figure .bgimg {
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #work .work-wrap figure figcaption {
@@ -1065,6 +1067,8 @@ footer form {
 footer form legend {
   font-size: 2em;
   margin-bottom: 2rem;
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
 }
 
 footer form p.josefin {
@@ -1084,6 +1088,8 @@ footer form fieldset .input-box:not(:last-child) {
 footer form fieldset .input-box label {
   display: block;
   margin-bottom: 6px;
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
 }
 
 footer form fieldset .input-box input,

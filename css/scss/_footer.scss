@@ -11,6 +11,7 @@ footer {
     legend {
       font-size: 2em;
       margin-bottom: 2rem;
+      @include josefin;
     }
     p.josefin {
       font-weight: 400;
@@ -28,6 +29,7 @@ footer {
         label {
           display: block;
           margin-bottom: 6px;
+          @include josefin;
         }
         input,
         select,
