@@ -82,7 +82,7 @@ repeater();
 const tabBtn = document.querySelectorAll(".filter-wrap__item");
 const webs = document.querySelectorAll(".web");
 const details = document.querySelectorAll(".detail");
-const tabAll = document.querySelectorAll(".list-layer");
+const tabAll = document.querySelectorAll(".list-inner__layer");
 
 tabBtn.forEach((tab) => {
   tab.addEventListener("click", () => {

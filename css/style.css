@@ -515,7 +515,7 @@ main {
   position: -webkit-sticky;
   position: sticky;
   top: 72px;
-  z-index: 2;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,49 +556,36 @@ main {
   color: #9a9ae1;
 }
 
-.list-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 20px;
+#work .work-wrap .list-inner {
+  padding-top: 2rem;
 }
 
-/* list-cont */
-.list-cont .list-layer {
-  margin-bottom: 50px;
-  /*  position: absolute;*/
+#work .work-wrap .list-inner .list-inner__layer {
+  display: block;
+  margin-bottom: 3rem;
+  border: 1px solid red;
 }
 
-.list-cont .list-cont-content {
-  z-index: 100;
-  color: white;
-  background-color: transparent;
+#work .work-wrap .list-inner .list-inner__layer .list-description {
+  text-align: center;
+  margin-top: 2rem;
+  border: 1px solid blue;
 }
 
-/*figure box*/
-.panels figure {
+#work .work-wrap .list-inner .list-inner__layer .list-description h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#work .work-wrap .list-inner .list-inner__layer .list-description p {
+  font-size: 16px;
+}
+
+#work .work-wrap figure {
   position: relative;
 }
 
-.panels figure .bgimg {
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  z-index: 0;
-  display: block;
-}
-
-.panels figure:before {
+#work .work-wrap figure:before {
   content: "";
   position: absolute;
   top: 0;
@@ -611,7 +598,20 @@ main {
   z-index: 1;
 }
 
-.panels figcaption {
+#work .work-wrap figure .bgimg {
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: 0;
+  display: block;
+}
+
+#work .work-wrap figure figcaption {
   position: absolute;
   top: 2rem;
   left: 0;
@@ -621,57 +621,63 @@ main {
   z-index: 2;
 }
 
-.panels figcaption .textbox {
+#work .work-wrap figure figcaption img {
+  max-width: 100px;
+}
+
+#work .work-wrap figure figcaption .list-text {
   color: #fff;
   margin: 8% 0;
   text-align: left;
   padding-left: 10%;
 }
 
-.panels figcaption .textbox li {
+#work .work-wrap figure figcaption .list-text li {
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
   font-weight: 400;
   display: block;
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-.panels figcaption .textbox h2 {
+#work .work-wrap figure figcaption .list-text li h2 {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 20px;
 }
 
-.panels .number {
+#work .work-wrap figure figcaption span {
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
+}
+
+#work .work-wrap figure figcaption span.number {
   position: absolute;
   bottom: -30px;
   left: -6px;
   color: #fff;
   font-weight: bold;
-  font-size: 120px;
+  font-size: 6em;
+  letter-spacing: -3px;
 }
 
-.panels .list-cont .list-layer .btn {
+#work .work-wrap figure figcaption span.btn {
   position: absolute;
   bottom: 7%;
   right: 7%;
   background: #fff;
   border-radius: 30px;
   font-size: 16px;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-.panels .list-cont .list-layer .ttl {
-  text-align: center;
-  line-height: 1.5em;
-  font-size: 20px;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.panels .list-cont .list-layer .ttl span {
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
+.list-cont .list-cont-content {
+  z-index: 100;
+  color: white;
+  background-color: transparent;
 }
 
 /*---------------------
@@ -715,6 +721,45 @@ main {
   color: #78229a;
 }
 
+@media screen and (min-width: 700px) {
+  #main .visual-wrap .visual-wrap__text .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main .visual-wrap .visual-wrap__text .btn-box a {
+    width: 30%;
+  }
+  #main .visual-wrap .visual-wrap__text .btn-box a:last-child {
+    margin-top: 0;
+    margin-left: 5px;
+  }
+  #work .work-wrap .list-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #work .work-wrap .list-inner .list-inner__layer {
+    width: 48%;
+  }
+}
+
 @media screen and (min-width: 769px) {
   #main .visual-wrap {
     display: -webkit-box;
@@ -743,24 +788,9 @@ main {
     padding: 1.4rem 2rem 3rem 0;
   }
   #main .visual-wrap .visual-wrap__text .btn-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #main .visual-wrap .visual-wrap__text .btn-box a {
-    width: 30%;
-  }
-  #main .visual-wrap .visual-wrap__text .btn-box a:last-child {
-    margin-top: 0;
-    margin-left: 5px;
   }
   #main .visual-wrap .visual-wrap__box {
     width: 100%;
@@ -878,6 +908,58 @@ main {
   #about .about-wrap .about-wrap__img {
     margin-top: 0;
     width: 40%;
+  }
+  #work .work-wrap .filter-wrap {
+    padding: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #work .work-wrap .filter-wrap li .filter-wrap__item {
+    font-size: 1em;
+  }
+  #work .work-wrap .list-inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(24%, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(24%, 1fr));
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
+  }
+  #work .work-wrap .list-inner .list-inner__layer {
+    width: auto;
+  }
+  #work .work-wrap .list-inner .list-inner__layer:hover .btn {
+    opacity: 1;
+  }
+  #work .work-wrap .list-inner .list-inner__layer:hover .bgimg {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  #work .work-wrap .list-inner .list-inner__layer:hover figure:before {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #work .work-wrap .list-inner figure {
+    overflow: hidden;
+  }
+  #work .work-wrap .list-inner figure:before {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  #work .work-wrap .list-inner figure figcaption span.btn {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #work .work-wrap .list-inner {
+    -ms-grid-columns: (minmax(20%, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   }
 }
 
@@ -1188,9 +1270,6 @@ button:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .panels .list-cont .list-layer {
-    width: 48%;
-  }
   .light-box .gallery {
     -webkit-column-width: 300px;
             column-width: 300px;
@@ -1210,43 +1289,6 @@ button:hover {
   }
   .tab {
     margin: 0;
-  }
-  .panels .list-cont .list-layer {
-    width: 100%;
-  }
-  .panels figure {
-    overflow: hidden;
-  }
-  .panels figcaption .textbox h2 {
-    font-size: 24px;
-  }
-  .panels figcaption .textbox li {
-    font-size: 20px;
-  }
-  .panels .list-cont .list-layer .btn {
-    opacity: 0;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  .panels .list-cont .list-layer:hover .btn {
-    opacity: 1;
-  }
-  .panels .list-cont .list-layer:hover .bgimg {
-    /*        transition: all .5s ease;*/
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
-  }
-  .panels .list-cont .list-layer figure:before {
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-  }
-  .panels .list-cont .list-layer:hover figure:before {
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
   }
   .light-box .gallery {
     -webkit-column-width: 200px;
