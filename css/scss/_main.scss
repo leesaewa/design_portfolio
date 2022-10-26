@@ -107,6 +107,8 @@ main {
   @include widthSize($ws: 90%);
 
   .work-wrap {
+    padding-top: 5rem;
+
     .filter-wrap {
       position: sticky;
       top: 72px;
@@ -145,12 +147,10 @@ main {
       .list-inner__layer {
         display: block;
         margin-bottom: 3rem;
-        border: 1px solid red;
 
         .list-description {
           text-align: center;
           margin-top: 2rem;
-          border: 1px solid blue;
 
           h3 {
             font-size: 1.2em;
@@ -183,10 +183,6 @@ main {
       .bgimg {
         border-top-left-radius: 30px;
         border-bottom-right-radius: 30px;
-        transform: scale(1);
-        transition: transform 0.5s;
-        z-index: 0;
-        display: block;
       }
 
       figcaption {
@@ -550,6 +546,8 @@ main {
           width: auto;
 
           &:hover {
+            transform: translateY(-1.4rem);
+
             .btn {
               opacity: 1;
             }
@@ -572,6 +570,9 @@ main {
           }
 
           figcaption {
+            img {
+              max-width: 130px;
+            }
             span {
               &.btn {
                 opacity: 0;
