@@ -1,3 +1,8 @@
+@mixin josefin($fw: bold) {
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: $fw;
+}
+
 @mixin flexbox($flexW: nowrap, $flexJC: center, $flexAI: center) {
   display: flex;
   flex-wrap: $flexW;
@@ -5,7 +10,7 @@
   align-items: $flexAI;
 }
 
-@mixin widthSize($ws: 1200px) {
+@mixin widthSize($ws: 1540px) {
   max-width: $ws;
   width: 100%;
   margin: 0 auto;
@@ -33,4 +38,10 @@
   width: $imgW;
   height: $imgH;
   object-fit: cover;
+}
+
+@mixin whiteBg() {
+  margin: 0 auto 5em;
+  padding: 5em 0;
+  background-color: $white;
 }

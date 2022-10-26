@@ -504,9 +504,58 @@ main {
      object-fit: cover;
 }
 
-/*---------------------
-        panel
----------------------*/
+#work {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#work .work-wrap .filter-wrap {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 72px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: auto;
+  background-color: #9a9ae1;
+}
+
+#work .work-wrap .filter-wrap li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+#work .work-wrap .filter-wrap li:not(:last-child) {
+  margin-right: 6px;
+}
+
+#work .work-wrap .filter-wrap li .filter-wrap__item {
+  background-color: transparent;
+  border: 0;
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  border-radius: 0;
+}
+
+#work .work-wrap .filter-wrap li .filter-wrap__item.active {
+  background-color: #fff;
+  color: #9a9ae1;
+}
+
 .list-cont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -646,6 +695,24 @@ main {
 .light-box .gallery li img {
   border-radius: 20px;
   border: 1px solid #ccc;
+}
+
+#skill {
+  margin: 0 auto 5em;
+  padding: 5em 0;
+  background-color: #fff;
+}
+
+#skill .skill-wrap {
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#skill .skill-wrap article h4 {
+  text-transform: uppercase;
+  color: #78229a;
 }
 
 @media screen and (min-width: 769px) {

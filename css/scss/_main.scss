@@ -75,11 +75,11 @@ main {
 // about
 //
 #about {
-  margin: 0 auto 5em;
-  padding: 5em 0;
-  background-color: $white;
+  @include whiteBg;
+
   .about-wrap {
     @include widthSize($ws: 90%);
+
     .about-wrap__text {
       p {
         margin-bottom: 2rem;
@@ -99,9 +99,48 @@ main {
   }
 }
 
-/*---------------------
-        panel
----------------------*/
+//
+// filter tab : work
+//
+
+#work {
+  @include widthSize($ws: 90%);
+
+  .work-wrap {
+    .filter-wrap {
+      position: sticky;
+      top: 72px;
+      z-index: 2;
+      @include flexbox($flexJC: flex-start);
+      overflow-x: auto;
+      background-color: $violet;
+
+      li {
+        flex: 0 0 auto;
+
+        &:not(:last-child) {
+          margin-right: 6px;
+        }
+
+        .filter-wrap__item {
+          background-color: transparent;
+          border: 0;
+          @include josefin($fw: 400);
+          text-transform: uppercase;
+          font-size: 0.8em;
+          border-radius: 0;
+
+          &.active {
+            background-color: $white;
+            color: $violet;
+          }
+        }
+      }
+    }
+
+    // list-wrap
+  } //work-wrap
+}
 
 .list-cont {
   display: flex;
@@ -226,6 +265,24 @@ main {
 .light-box .gallery li img {
   border-radius: 20px;
   border: 1px solid #ccc;
+}
+
+//
+// skill
+//
+#skill {
+  @include whiteBg;
+
+  .skill-wrap {
+    @include widthSize($ws: 90%);
+
+    article {
+      h4 {
+        text-transform: uppercase;
+        color: #78229a;
+      }
+    }
+  }
 }
 
 //

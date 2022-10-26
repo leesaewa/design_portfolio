@@ -13,8 +13,7 @@ body {
 }
 
 .josefin {
-  font-family: "Josefin Sans", "sans-serif";
-  font-weight: bold;
+  @include josefin;
 }
 
 * {
