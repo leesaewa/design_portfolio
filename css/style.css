@@ -755,6 +755,42 @@ main {
   font-size: 3em;
 }
 
+#skill .skill-wrap .experience-wrap {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #ccc;
+}
+
+#skill .skill-wrap .experience-wrap h4 {
+  color: #9a9ae1;
+  font-size: 2em;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+#skill .skill-wrap .experience-wrap .experience-wrap__box {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#skill .skill-wrap .experience-wrap .experience-wrap__box li {
+  background-color: #9a9ae1;
+  color: #fff;
+  padding: 2rem;
+  margin-bottom: 3px;
+}
+
+#skill .skill-wrap .experience-wrap .experience-wrap__box li h5 {
+  font-size: 1.4em;
+}
+
+#skill .skill-wrap .experience-wrap .experience-wrap__box li p {
+  opacity: 0.8;
+  margin-top: 1.4rem;
+}
+
 @media screen and (min-width: 700px) {
   #main .visual-wrap .visual-wrap__text .btn-box {
     display: -webkit-box;
@@ -799,6 +835,14 @@ main {
         grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
     -webkit-column-gap: 2rem;
             column-gap: 2rem;
+  }
+  #skill .skill-wrap .experience-wrap__box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(45%, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+    -webkit-column-gap: 3px;
+            column-gap: 3px;
   }
 }
 
@@ -1035,6 +1079,10 @@ main {
   }
   #skill .skill-wrap .skill-box li ul li i {
     font-size: 2.7em;
+  }
+  #skill .skill-wrap .experience-wrap__box {
+    -ms-grid-columns: (minmax(30%, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
 }
 

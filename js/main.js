@@ -1,13 +1,3 @@
-//header fixed
-$(window).scroll(function () {
-  const scroll = $(window).scrollTop();
-  if (scroll >= 50) {
-    $(".tabs").addClass("change");
-  } else {
-    $(".tabs").removeClass("change");
-  }
-});
-
 $(document).ready(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
@@ -56,6 +46,7 @@ navBtn.addEventListener("click", (e) => {
 
 //
 // slider
+//
 const slides = document.querySelectorAll(".slides li");
 const numOfSlide = slides.length;
 
@@ -83,3 +74,7 @@ let repeater = () => {
 
 eventHandler();
 repeater();
+
+//
+// fade in animation
+//

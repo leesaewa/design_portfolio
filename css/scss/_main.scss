@@ -323,6 +323,39 @@ main {
         }
       }
     }
+
+    //
+    .experience-wrap {
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 1px solid $listGrey;
+
+      h4 {
+        color: $violet;
+        font-size: 2em;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+      }
+
+      .experience-wrap__box {
+        @include widthSize($ws: 1200px);
+
+        li {
+          background-color: $violet;
+          color: $white;
+          padding: 2rem;
+          margin-bottom: 3px;
+
+          h5 {
+            font-size: 1.4em;
+          }
+          p {
+            opacity: 0.8;
+            margin-top: 1.4rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -372,6 +405,11 @@ main {
       .skill-box {
         @include gridLayout($minW: 45%);
         column-gap: 2rem;
+      }
+
+      .experience-wrap__box {
+        @include gridLayout($minW: 45%);
+        column-gap: 3px;
       }
     }
   }
@@ -679,6 +717,10 @@ main {
             }
           }
         }
+      }
+
+      .experience-wrap__box {
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
       }
     }
   }
