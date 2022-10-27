@@ -22,7 +22,6 @@ body {
 }
 
 .ttl {
-  padding: 0 20px;
   margin-bottom: 40px;
 
   h2 {
@@ -71,59 +70,16 @@ button {
   @include flexbox();
   li {
     a {
-      svg {
-        width: 42px;
+      i {
+        font-size: 2em;
         transition: $easefive;
       }
       &:hover {
-        svg {
-          fill: $mainColor;
+        i {
+          transform: translateY(-1rem);
+          color: $mainColor;
         }
       }
     }
   }
-}
-
-/*---------------------
-        responsive
----------------------*/
-
-@media screen and (min-width: 768px) {
-  .tabs {
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .ttl {
-    padding: 0;
-  }
-  .tabs {
-    top: 80px;
-    right: 0;
-    width: auto;
-    overflow-x: hidden;
-    background: transparent;
-  }
-
-  .tab {
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .list-cont {
-    margin: 0;
-  }
-
-  .tabs {
-    right: 100px;
-    transition: all 0.5s ease;
-  }
-  .tabs.change {
-    top: 10px;
-  }
-}
-
-@media screen and (min-width: 1441px) {
 }

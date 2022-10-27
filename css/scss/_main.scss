@@ -249,12 +249,6 @@ main {
   }
 }
 
-.list-cont .list-cont-content {
-  z-index: 100;
-  color: white;
-  background-color: transparent;
-}
-
 // detail page
 .detail-wrap {
   padding-bottom: 5em;
@@ -287,10 +281,46 @@ main {
   .skill-wrap {
     @include widthSize($ws: 90%);
 
-    article {
-      h4 {
-        text-transform: uppercase;
-        color: #78229a;
+    .skill-box {
+      li {
+        background-color: $subColor;
+        padding: 2rem;
+        border-radius: 20px;
+        margin-bottom: 2rem;
+
+        .skill-box__icons {
+          font-size: 3em;
+          color: $violet;
+        }
+
+        h2 {
+          @include josefin;
+          font-size: 1em;
+          padding: 1.2rem 0 1rem;
+          color: $violet;
+        }
+        p {
+          font-size: 0.9em;
+          text-align: left;
+        }
+
+        ul {
+          @include gridLayout($minW: 20%);
+          column-gap: 8px;
+          margin-top: 2rem;
+          padding-top: 2rem;
+          border-top: 1px solid $listGrey;
+
+          li {
+            border-radius: 0;
+            padding: 0;
+            margin: 0;
+
+            i {
+              font-size: 3em;
+            }
+          }
+        }
       }
     }
   }
@@ -336,6 +366,15 @@ main {
       }
     }
   }
+
+  #skill {
+    .skill-wrap {
+      .skill-box {
+        @include gridLayout($minW: 45%);
+        column-gap: 2rem;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -373,6 +412,18 @@ main {
   .detail-wrap {
     .gallery {
       column-count: 3;
+    }
+  }
+
+  #skill {
+    .skill-wrap {
+      .skill-box {
+        li {
+          ul {
+            grid-template-columns: repeat(auto-fill, minmax(14%, 1fr));
+          }
+        }
+      }
     }
   }
 }
@@ -504,8 +555,7 @@ main {
 
   // about
   #about {
-    border-top-right-radius: 12em;
-    border-bottom-left-radius: 12em;
+    @include whiteBgRadius;
 
     .about-wrap {
       @include flexbox($flexJC: space-between);
@@ -549,8 +599,7 @@ main {
       }
 
       .list-inner {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(24%, 1fr));
+        @include gridLayout;
         column-gap: 3rem;
 
         .list-inner__layer {
@@ -605,6 +654,27 @@ main {
 
               img {
                 transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // skill
+  #skill {
+    @include whiteBgRadius;
+
+    .skill-wrap {
+      .skill-box {
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+
+        li {
+          ul {
+            li {
+              i {
+                font-size: 2.7em;
               }
             }
           }

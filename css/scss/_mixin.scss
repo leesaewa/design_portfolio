@@ -10,6 +10,11 @@
   align-items: $flexAI;
 }
 
+@mixin gridLayout($minW: 24%, $maxW: 1fr) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($minW, $maxW));
+}
+
 @mixin widthSize($ws: 1540px) {
   max-width: $ws;
   width: 100%;
@@ -36,6 +41,11 @@
 @mixin listRadius($rd: 2rem) {
   border-top-left-radius: $rd;
   border-bottom-right-radius: $rd;
+}
+
+@mixin whiteBgRadius() {
+  border-top-right-radius: 12em;
+  border-bottom-left-radius: 12em;
 }
 
 @mixin img($imgW: 100%, $imgH: 50vh) {
