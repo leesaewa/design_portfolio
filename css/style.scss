@@ -92,10 +92,6 @@ button {
   .tabs {
     justify-content: center;
   }
-
-  .light-box .gallery {
-    column-width: 300px;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -112,11 +108,6 @@ button {
 
   .tab {
     margin: 0;
-  }
-
-  .light-box .gallery {
-    column-width: 200px;
-    padding: 0 20px 0 0;
   }
 }
 
@@ -135,8 +126,4 @@ button {
 }
 
 @media screen and (min-width: 1441px) {
-  .light-box .gallery {
-    padding: 0;
-    column-width: 400px;
-  }
 }

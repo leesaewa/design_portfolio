@@ -169,10 +169,6 @@ main {
       @include listRadius;
       overflow: hidden;
 
-      // .bgimg {
-      //   @include listRadius;
-      // }
-
       &:before {
         content: "";
         position: absolute;
@@ -182,7 +178,6 @@ main {
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
-        // @include listRadius;
       }
 
       figcaption {
@@ -195,7 +190,14 @@ main {
         z-index: 2;
 
         img {
-          max-width: 40%;
+          max-width: 50%;
+          padding: 8px 1rem;
+          border-radius: 8px;
+          background-color: $white;
+
+          &.logo-black {
+            background-color: $black;
+          }
         }
 
         .list-text {
@@ -253,24 +255,27 @@ main {
   background-color: transparent;
 }
 
-/*---------------------
-        detail page---light box
----------------------*/
+// detail page
+.detail-wrap {
+  padding-bottom: 5em;
 
-.light-box .gallery {
-  column-width: 120px;
-  column-gap: 10px;
-  padding: 20px;
-}
-.light-box .gallery li {
-  display: inline-block;
-  margin: 0;
-  margin-bottom: 20px;
-  vertical-align: top;
-}
-.light-box .gallery li img {
-  border-radius: 20px;
-  border: 1px solid #ccc;
+  .gallery {
+    column-count: 2;
+    column-gap: 2rem;
+    column-rule: 1px solid $listGrey;
+
+    li {
+      margin-bottom: 20px;
+      border-radius: 20px;
+      border: 1px solid $listGrey;
+      overflow: hidden;
+      transition: $easefive;
+
+      img {
+        transition: $easefive;
+      }
+    }
+  }
 }
 
 //
@@ -361,6 +366,13 @@ main {
         width: 100%;
         margin-top: 0;
       }
+    }
+  }
+
+  // detail page
+  .detail-wrap {
+    .gallery {
+      column-count: 3;
     }
   }
 }
@@ -576,6 +588,23 @@ main {
             span {
               &.btn {
                 opacity: 0;
+              }
+            }
+          }
+        }
+      }
+
+      // detail page
+      .detail-wrap {
+        .gallery {
+          column-count: 4;
+
+          li {
+            &:hover {
+              transform: translateY(-1rem);
+
+              img {
+                transform: scale(1.1);
               }
             }
           }
