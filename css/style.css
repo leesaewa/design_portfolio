@@ -566,6 +566,9 @@ main {
 #work .work-wrap .list-inner .list-inner__layer {
   display: block;
   margin-bottom: 3rem;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
 }
 
 #work .work-wrap .list-inner .list-inner__layer .list-description {
@@ -594,16 +597,7 @@ main {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   z-index: 1;
-}
-
-#work .work-wrap figure .bgimg {
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 
 #work .work-wrap figure figcaption {
@@ -617,7 +611,7 @@ main {
 }
 
 #work .work-wrap figure figcaption img {
-  max-width: 100px;
+  max-width: 40%;
 }
 
 #work .work-wrap figure figcaption .list-text {
@@ -923,6 +917,10 @@ main {
   #work .work-wrap .list-inner .list-inner__layer {
     width: auto;
   }
+  #work .work-wrap .list-inner .list-inner__layer .bgimg {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
   #work .work-wrap .list-inner .list-inner__layer:hover {
     -webkit-transform: translateY(-1.4rem);
             transform: translateY(-1.4rem);
@@ -948,9 +946,6 @@ main {
   #work .work-wrap .list-inner figure:before {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-  }
-  #work .work-wrap .list-inner figure figcaption img {
-    max-width: 130px;
   }
   #work .work-wrap .list-inner figure figcaption span.btn {
     opacity: 0;
