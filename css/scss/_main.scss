@@ -147,9 +147,6 @@ main {
       .list-inner__layer {
         display: block;
         margin-bottom: 3rem;
-        border-top-left-radius: 30px;
-        border-bottom-right-radius: 30px;
-        overflow: hidden;
 
         .list-description {
           text-align: center;
@@ -169,6 +166,12 @@ main {
 
     figure {
       position: relative;
+      @include listRadius;
+      overflow: hidden;
+
+      // .bgimg {
+      //   @include listRadius;
+      // }
 
       &:before {
         content: "";
@@ -178,8 +181,8 @@ main {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-
         z-index: 1;
+        // @include listRadius;
       }
 
       figcaption {
@@ -202,8 +205,7 @@ main {
           padding-left: 10%;
 
           li {
-            @include josefin();
-            font-weight: 400;
+            @include josefin($fw: 400);
             display: block;
             font-size: 18px;
             margin-bottom: 20px;
@@ -219,14 +221,14 @@ main {
         span {
           @include josefin();
 
-          &.number {
+          &.eng {
             position: absolute;
-            bottom: -30px;
+            bottom: -16px;
             left: -6px;
             color: #fff;
-            font-weight: bold;
-            font-size: 6em;
+            font-size: 3.4em;
             letter-spacing: -3px;
+            text-transform: uppercase;
           }
 
           &.btn {
@@ -549,6 +551,10 @@ main {
           &:hover {
             transform: translateY(-1.4rem);
 
+            figure {
+              @include listRadius($rd: 0);
+            }
+
             .btn {
               opacity: 1;
             }
@@ -556,15 +562,11 @@ main {
               transform: scale(1.1);
               transition: transform 0.5s;
             }
-            figure:before {
-              border-top-left-radius: 0;
-              border-bottom-right-radius: 0;
-            }
           }
         }
 
         figure {
-          overflow: hidden;
+          transition: $easefive;
 
           &:before {
             transition: $easefive;
@@ -585,7 +587,7 @@ main {
 }
 
 //
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1500px) {
   // work
   #work {
     .work-wrap {

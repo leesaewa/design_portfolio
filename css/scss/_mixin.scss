@@ -33,6 +33,10 @@
   background-color: $subColor;
   color: $mainColor;
 }
+@mixin listRadius($rd: 2rem) {
+  border-top-left-radius: $rd;
+  border-bottom-right-radius: $rd;
+}
 
 @mixin img($imgW: 100%, $imgH: 50vh) {
   width: $imgW;

@@ -132,17 +132,9 @@ button {
   .tabs.change {
     top: 10px;
   }
-
-  .panels .list-cont .list-layer {
-    width: 48%;
-  }
 }
 
 @media screen and (min-width: 1441px) {
-  .panels .list-cont .list-layer {
-    width: 32%;
-  }
-
   .light-box .gallery {
     padding: 0;
     column-width: 400px;

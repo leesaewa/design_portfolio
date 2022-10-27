@@ -566,9 +566,6 @@ main {
 #work .work-wrap .list-inner .list-inner__layer {
   display: block;
   margin-bottom: 3rem;
-  border-top-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  overflow: hidden;
 }
 
 #work .work-wrap .list-inner .list-inner__layer .list-description {
@@ -587,6 +584,9 @@ main {
 
 #work .work-wrap figure {
   position: relative;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  overflow: hidden;
 }
 
 #work .work-wrap figure:before {
@@ -623,7 +623,6 @@ main {
 
 #work .work-wrap figure figcaption .list-text li {
   font-family: "Josefin Sans", "sans-serif";
-  font-weight: bold;
   font-weight: 400;
   display: block;
   font-size: 18px;
@@ -641,14 +640,14 @@ main {
   font-weight: bold;
 }
 
-#work .work-wrap figure figcaption span.number {
+#work .work-wrap figure figcaption span.eng {
   position: absolute;
-  bottom: -30px;
+  bottom: -16px;
   left: -6px;
   color: #fff;
-  font-weight: bold;
-  font-size: 6em;
+  font-size: 3.4em;
   letter-spacing: -3px;
+  text-transform: uppercase;
 }
 
 #work .work-wrap figure figcaption span.btn {
@@ -925,6 +924,10 @@ main {
     -webkit-transform: translateY(-1.4rem);
             transform: translateY(-1.4rem);
   }
+  #work .work-wrap .list-inner .list-inner__layer:hover figure {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   #work .work-wrap .list-inner .list-inner__layer:hover .btn {
     opacity: 1;
   }
@@ -936,12 +939,9 @@ main {
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s;
   }
-  #work .work-wrap .list-inner .list-inner__layer:hover figure:before {
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
   #work .work-wrap .list-inner figure {
-    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   #work .work-wrap .list-inner figure:before {
     -webkit-transition: all 0.5s ease;
@@ -952,7 +952,7 @@ main {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1500px) {
   #work .work-wrap .list-inner {
     -ms-grid-columns: (minmax(20%, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
@@ -1310,15 +1310,9 @@ button:hover {
   .tabs.change {
     top: 10px;
   }
-  .panels .list-cont .list-layer {
-    width: 48%;
-  }
 }
 
 @media screen and (min-width: 1441px) {
-  .panels .list-cont .list-layer {
-    width: 32%;
-  }
   .light-box .gallery {
     padding: 0;
     -webkit-column-width: 400px;
