@@ -1277,36 +1277,83 @@ footer small {
   padding: 20px;
 }
 
-.scrolltop {
-  display: none;
+.floating-nav {
   position: fixed;
-  right: 30px;
-  bottom: 50px;
+  bottom: 10px;
+  right: 10px;
   z-index: 3;
-  background: #0054ff;
-  color: #fff;
-  border-radius: 50%;
+}
+
+.floating-nav ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.floating-nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
   width: 50px;
   height: 50px;
-}
-
-.scrolltop:hover, .scrolltop:focus {
-  background: #000;
   color: #fff;
+  border-radius: 50%;
 }
 
-.scrolltop:hover .material-icons {
-  margin-top: 5px;
+.floating-nav ul li a:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.floating-nav ul li a .tooltip {
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
+  background-color: #121212;
+  padding: 6px 8px 4px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 30%;
+  right: 120%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
-
-.scrolltop .material-icons {
-  display: block;
   text-align: center;
-  margin-top: 10px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.floating-nav ul li a .tooltip::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent #121212;
+}
+
+.floating-nav ul li a.floating-nav__lang {
+  background-color: #121212;
+}
+
+.floating-nav ul li a.floating-nav__top {
+  background-color: #0054ff;
+  display: none;
+}
+
+.floating-nav ul li a.floating-nav__top:hover, .floating-nav ul li a.floating-nav__top:focus {
+  background: #121212;
 }
 
 @media screen and (min-width: 769px) {

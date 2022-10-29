@@ -1,7 +1,16 @@
+//
+// jquery
+//
+
 $(document).ready(function () {
+  // work 불러오기
+  $("#contents").load("/work_list.html");
+
+  // scroll top
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $("#backToTop").fadeIn(500);
+      $("#backToTop").css("display", "flex");
     } else {
       $("#backToTop").fadeOut("slow");
     }
@@ -10,14 +19,6 @@ $(document).ready(function () {
     e.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, 200);
   });
-});
-
-//
-// work html 불러오기
-//
-
-$(document).ready(function () {
-  $("#contents").load("/work_list.html");
 });
 
 //
