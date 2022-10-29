@@ -9,13 +9,12 @@ header {
   top: 0;
   left: 0;
   z-index: 5;
-  font-family: "Josefin Sans", "sans-serif";
+  @include josefin;
 
   .main-navbar {
     @include flexbox($flexJC: space-between);
     position: relative;
-    width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 
   .hamburger-btn {
@@ -82,8 +81,11 @@ header {
     .global-nav__list {
       li {
         a {
-          transition: $cubic;
           transform: translate3d(0, 0, 0);
+
+          &:hover {
+            color: $mainColor;
+          }
         }
       }
     }
@@ -95,13 +97,18 @@ header {
     padding: 0 2rem;
 
     li {
-      display: block;
-      font-size: 6em;
       width: 100%;
       text-align: center;
+      font-size: 3.2em;
+      font-weight: bold;
+      overflow: hidden;
+      margin-top: 4rem;
 
-      transition: $cubic;
-      transform: translate3d(0, -100%, 0);
+      a {
+        display: block;
+        transition: $cubic 0.3s;
+        transform: translate3d(0, 100%, 0);
+      }
     }
   }
 }
@@ -111,6 +118,10 @@ header {
 //
 @media screen and (min-width: 769px) {
   header {
+    .main-navbar {
+      padding: 1rem 2rem;
+    }
+
     .hamburger-btn {
       display: none;
     }
@@ -121,7 +132,7 @@ header {
       transition: $easefive;
       position: absolute;
       right: 2rem;
-      top: 2.4rem;
+      top: 1.2rem;
       left: auto;
       background-color: transparent;
       width: auto;
@@ -132,8 +143,11 @@ header {
         padding: 0;
 
         li {
+          overflow: visible;
           font-size: 1.2em;
+          font-weight: 400;
           width: auto;
+          margin: 0;
 
           &:not(:last-child) {
             padding-right: 1rem;
@@ -142,6 +156,7 @@ header {
           a {
             padding: 6px 10px;
             position: relative;
+            transform: none;
 
             &::after {
               transition: $easefive;

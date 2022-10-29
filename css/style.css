@@ -212,6 +212,7 @@ header {
   left: 0;
   z-index: 5;
   font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
 }
 
 header .main-navbar {
@@ -227,8 +228,7 @@ header .main-navbar {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 
 header .hamburger-btn {
@@ -317,10 +317,12 @@ header .hamburger-btn.hamburger-btn-open::after {
 }
 
 .global-nav.global-nav--open .global-nav__list li a {
-  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+}
+
+.global-nav.global-nav--open .global-nav__list li a:hover {
+  color: #0054ff;
 }
 
 .global-nav .global-nav__list {
@@ -340,17 +342,26 @@ header .hamburger-btn.hamburger-btn-open::after {
 }
 
 .global-nav .global-nav__list li {
-  display: block;
-  font-size: 6em;
   width: 100%;
   text-align: center;
-  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
+  font-size: 3.2em;
+  font-weight: bold;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+
+.global-nav .global-nav__list li a {
+  display: block;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
 }
 
 @media screen and (min-width: 769px) {
+  header .main-navbar {
+    padding: 1rem 2rem;
+  }
   header .hamburger-btn {
     display: none;
   }
@@ -362,7 +373,7 @@ header .hamburger-btn.hamburger-btn-open::after {
     transition: all 0.5s ease;
     position: absolute;
     right: 2rem;
-    top: 2.4rem;
+    top: 1.2rem;
     left: auto;
     background-color: transparent;
     width: auto;
@@ -373,8 +384,11 @@ header .hamburger-btn.hamburger-btn-open::after {
     padding: 0;
   }
   header .global-nav__pc .global-nav__list li {
+    overflow: visible;
     font-size: 1.2em;
+    font-weight: 400;
     width: auto;
+    margin: 0;
   }
   header .global-nav__pc .global-nav__list li:not(:last-child) {
     padding-right: 1rem;
@@ -382,6 +396,8 @@ header .hamburger-btn.hamburger-btn-open::after {
   header .global-nav__pc .global-nav__list li a {
     padding: 6px 10px;
     position: relative;
+    -webkit-transform: none;
+            transform: none;
   }
   header .global-nav__pc .global-nav__list li a::after {
     -webkit-transition: all 0.5s ease;
