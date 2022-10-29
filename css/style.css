@@ -720,12 +720,17 @@ main {
   color: #9a9ae1;
 }
 
+#skill .skill-wrap .skill-box li .skill-box__icons i {
+  font-size: 0.8em;
+}
+
 #skill .skill-wrap .skill-box li h2 {
   font-family: "Josefin Sans", "sans-serif";
   font-weight: bold;
   font-size: 1em;
   padding: 1.2rem 0 1rem;
   color: #9a9ae1;
+  text-transform: uppercase;
 }
 
 #skill .skill-wrap .skill-box li p {
@@ -740,6 +745,7 @@ main {
       grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   -webkit-column-gap: 8px;
           column-gap: 8px;
+  row-gap: 8px;
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid #ccc;
@@ -752,7 +758,11 @@ main {
 }
 
 #skill .skill-wrap .skill-box li ul li i {
-  font-size: 3em;
+  font-size: 2.6em;
+}
+
+#skill .skill-wrap .skill-box li ul li svg {
+  width: 80%;
 }
 
 #skill .skill-wrap .experience-wrap {
@@ -762,8 +772,8 @@ main {
 }
 
 #skill .skill-wrap .experience-wrap h4 {
-  color: #9a9ae1;
-  font-size: 2em;
+  color: #0054ff;
+  font-size: 1.2em;
   margin-bottom: 3rem;
   text-transform: uppercase;
 }
@@ -1073,12 +1083,12 @@ main {
     border-top-right-radius: 12em;
     border-bottom-left-radius: 12em;
   }
-  #skill .skill-wrap .skill-box {
-    -ms-grid-columns: (minmax(20%, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  #skill .skill-wrap {
+    max-width: 80%;
   }
-  #skill .skill-wrap .skill-box li ul li i {
-    font-size: 2.7em;
+  #skill .skill-wrap .skill-box {
+    -ms-grid-columns: (minmax(25%, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   }
   #skill .skill-wrap .experience-wrap__box {
     -ms-grid-columns: (minmax(30%, 1fr))[auto-fill];
