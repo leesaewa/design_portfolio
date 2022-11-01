@@ -4,39 +4,11 @@
 @import "scss/_header.scss";
 @import "scss/_main.scss";
 @import "scss/_footer.scss";
+@import "scss/_common.scss";
 
-/*---------------------
-        common
----------------------*/
-::selection {
-  background: #0054ff;
-  color: #fff;
-}
-
-body {
-  background-color: #f4f8ff;
-}
-
-.row {
-  @include widthSize($ws: 1500px);
-}
-
-.ttl {
-  margin-bottom: 40px;
-
-  h2 {
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #0054ff;
-    margin-bottom: 10px;
-  }
-
-  h3 {
-    font-size: 30px;
-    line-height: 1.3;
-  }
-}
+//
+//
+//
 
 button {
   @include buttonColor;
@@ -47,21 +19,6 @@ button {
     @include buttonHover;
   }
 }
-
-.btn-box {
-  .btn {
-    @include buttonColor;
-    font-weight: 400;
-
-    &:hover {
-      @include buttonHover;
-    }
-  }
-}
-
-//
-//
-//
 
 //
 // social btn

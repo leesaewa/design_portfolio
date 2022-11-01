@@ -1405,6 +1405,25 @@ body {
   line-height: 1.3;
 }
 
+.btn-box .btn {
+  display: block;
+  background-color: #0054ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #0054ff;
+  padding: 8px 10px 8px;
+  font-size: 1em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: 400;
+}
+
+.btn-box .btn:hover {
+  background-color: #f4f8ff;
+  color: #0054ff;
+}
+
 button {
   display: block;
   background-color: #0054ff;
@@ -1421,25 +1440,6 @@ button {
 }
 
 button:hover {
-  background-color: #f4f8ff;
-  color: #0054ff;
-}
-
-.btn-box .btn {
-  display: block;
-  background-color: #0054ff;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid #0054ff;
-  padding: 8px 10px 8px;
-  font-size: 1em;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  font-weight: 400;
-}
-
-.btn-box .btn:hover {
   background-color: #f4f8ff;
   color: #0054ff;
 }

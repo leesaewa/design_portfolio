@@ -1,0 +1,43 @@
+/*---------------------
+        common
+---------------------*/
+::selection {
+  background: $mainColor;
+  color: $white;
+}
+
+body {
+  background-color: $subColor;
+}
+
+.row {
+  @include widthSize($ws: 1500px);
+}
+
+.ttl {
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $mainColor;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+}
+
+.btn-box {
+  .btn {
+    @include buttonColor;
+    font-weight: 400;
+
+    &:hover {
+      @include buttonHover;
+    }
+  }
+}

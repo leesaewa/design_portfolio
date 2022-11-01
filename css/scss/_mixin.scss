@@ -15,11 +15,11 @@
   grid-template-columns: repeat(auto-fill, minmax($minW, $maxW));
 }
 
-@mixin widthSize($ws: 1540px) {
+@mixin widthSize($ws: 1540px, $ta: center) {
   max-width: $ws;
   width: 100%;
   margin: 0 auto;
-  text-align: center;
+  text-align: $ta;
 }
 
 @mixin buttonColor() {

@@ -5,20 +5,6 @@
 $(document).ready(function () {
   // work 불러오기
   $("#contents").load("/work_list.html");
-
-  // scroll top
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $("#backToTop").fadeIn(500);
-      $("#backToTop").css("display", "flex");
-    } else {
-      $("#backToTop").fadeOut("slow");
-    }
-  });
-  $("#backToTop").click(function (e) {
-    e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, 200);
-  });
 });
 
 //
@@ -75,7 +61,3 @@ let repeater = () => {
 
 eventHandler();
 repeater();
-
-//
-// fade in animation
-//
