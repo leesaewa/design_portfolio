@@ -424,21 +424,31 @@ body {
 /*---------------------
         common
 ---------------------*/
-.btn {
+.btn-box .btn {
   border: 2px solid #0054ff;
   display: block;
   text-align: center;
   color: #fff;
   background: #0054ff;
-  line-height: 2em;
-  padding: 1rem 0 0.7rem;
+  padding: 1rem 0 1rem;
   font-size: 1em;
   text-transform: uppercase;
 }
 
-.btn:hover {
+.btn-box .btn:hover {
   background: #fff;
   color: #0054ff;
+}
+
+.btn-box .btn:first-child {
+  margin-bottom: 8px;
+  border: 2px solid #9a9ae1;
+  background-color: #9a9ae1;
+}
+
+.btn-box .btn:first-child:hover {
+  background: #fff;
+  color: #9a9ae1;
 }
 
 /*---------------------
@@ -826,6 +836,26 @@ footer small {
 }
 
 @media screen and (min-width: 1024px) {
+  .btn-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .btn-box .btn {
+    width: 48%;
+    margin: 0;
+  }
+  .btn-box .btn:first-child {
+    margin-bottom: 0;
+  }
   .title {
     text-align: center;
   }

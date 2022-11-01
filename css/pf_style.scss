@@ -10,21 +10,32 @@
 /*---------------------
         common
 ---------------------*/
+.btn-box {
+  .btn {
+    border: 2px solid $mainColor;
+    display: block;
+    text-align: center;
+    color: $white;
+    background: $mainColor;
+    padding: 1rem 0 1rem;
+    font-size: 1em;
+    text-transform: uppercase;
 
-.btn {
-  border: 2px solid $mainColor;
-  display: block;
-  text-align: center;
-  color: $white;
-  background: $mainColor;
-  line-height: 2em;
-  padding: 1rem 0 0.7rem;
-  font-size: 1em;
-  text-transform: uppercase;
+    &:hover {
+      background: $white;
+      color: $mainColor;
+    }
 
-  &:hover {
-    background: $white;
-    color: $mainColor;
+    &:first-child {
+      margin-bottom: 8px;
+      border: 2px solid $violet;
+      background-color: $violet;
+
+      &:hover {
+        background: $white;
+        color: $violet;
+      }
+    }
   }
 }
 
@@ -378,6 +389,20 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
+  // common
+  .btn-box {
+    @include flexbox($flexJC: space-between);
+
+    .btn {
+      width: 48%;
+      margin: 0;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .title {
     text-align: center;
 
