@@ -4,7 +4,7 @@
 
 $(document).ready(function () {
   // work 불러오기
-  $("#contents").load("../work_list.html");
+  $("#contents").load("/design_portfolio/work_list.html");
 });
 
 //
