@@ -5,7 +5,8 @@
 $(document).ready(function () {
   // work 불러오기
   $("#contents").load(
-    "https://leesaewa.github.io/design_portfolio/work_list.html"
+    // "https://leesaewa.github.io/design_portfolio/work_list.html"
+    "../../work_list.html"
   );
 });
 
