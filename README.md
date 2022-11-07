@@ -7,7 +7,7 @@
 ## Project
 
 - start: 2021.10, end: 2021.11
-- added japanese:
+- added japanese: 2022.11.08
 - modify&update: start `221018`, end ``
 
 ## Overview

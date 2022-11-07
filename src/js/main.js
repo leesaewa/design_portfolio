@@ -9,7 +9,9 @@ $(document).ready(function () {
       "https://leesaewa.github.io/design_portfolio/work_list.html"
     );
   } else {
-    $("#contents").load("../../ja/work_list.html");
+    $("#contents").load(
+      "https://leesaewa.github.io/design_portfolio/ja/work_list.html"
+    );
   }
 });
 
