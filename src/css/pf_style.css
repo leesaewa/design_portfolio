@@ -796,7 +796,6 @@ footer {
 }
 
 footer ul {
-  border: 1px solid red;
   max-width: 90%;
   width: 100%;
   margin: 2rem auto;
@@ -806,12 +805,9 @@ footer ul {
 footer ul li {
   font-family: "Josefin Sans", "sans-serif";
   font-weight: bold;
-  border: 1px solid blue;
   font-size: 20px;
   width: 100%;
   overflow: hidden;
-  border-radius: 1.2rem;
-  position: relative;
 }
 
 footer ul li:not(:last-child) {
@@ -821,21 +817,84 @@ footer ul li:not(:last-child) {
 footer ul li a {
   display: block;
   padding: 4rem 0;
-  background-position: center center;
+  position: relative;
+  background-position: center 33%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-footer ul li a:hover {
-  color: #0054ff;
-  letter-spacing: 2px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+footer ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: none;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  opacity: 0.3;
 }
 
-footer ul li a:hover {
+footer ul li a:hover:before {
+  background-color: #0054ff;
+  opacity: 0.8;
+}
+
+footer ul li a:hover span {
+  -webkit-transform: scale(10);
+          transform: scale(10);
+  opacity: 0;
+}
+
+footer ul li a:hover p {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  letter-spacing: 2px;
+}
+
+footer ul li a:hover p:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-3deg);
+          transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+footer ul li a span {
+  position: absolute;
+  top: 50%;
+  left: 6rem;
+  -webkit-transform: translate(-50%, -50%) rotate(-16deg);
+          transform: translate(-50%, -50%) rotate(-16deg);
+  color: #0054ff;
+  font-size: 4em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+footer ul li a p {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  font-size: 2em;
+  text-transform: uppercase;
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+footer ul li a p:after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 footer small {
@@ -875,9 +934,6 @@ footer small {
     height: 170px;
     left: 50%;
     bottom: -168px;
-  }
-  footer ul li {
-    width: 20%;
   }
   /*container*/
 }
@@ -932,6 +988,29 @@ footer small {
   }
   #cont .portfolio-list ul {
     width: 38%;
+  }
+  footer ul {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer ul li {
+    width: 48%;
+  }
+  footer ul li:not(:last-child) {
+    margin-bottom: 0;
   }
   /*추가*/
 }
