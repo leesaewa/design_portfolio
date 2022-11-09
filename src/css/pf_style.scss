@@ -247,13 +247,18 @@ header {
 
   .portfolio-list {
     figcaption {
-      padding: 20px;
+      @include widthSize($ws: 90%, $margin: 6rem);
+      text-align: left;
 
       .text-basic {
-        margin-bottom: 40px;
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
 
         li {
-          margin-bottom: 2rem;
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
         }
 
         h2 {
@@ -298,7 +303,7 @@ header {
 
   .portfolio-detail {
     @include widthSize($ws: 90%);
-    padding: 100px 20px;
+    padding: 6rem 0;
 
     p {
       line-height: 1.9;
@@ -431,6 +436,12 @@ footer {
       figcaption {
         @include flexbox($flexJC: space-between, $flexAI: flex-start);
 
+        .text-basic {
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+
         ul {
           width: 47%;
         }
@@ -500,15 +511,15 @@ footer {
 
     .portfolio-list {
       figcaption {
-        margin: 50px auto;
         max-width: 1200px;
-        text-align: left;
-        padding: 20px 0;
-        justify-content: space-around;
       }
       ul {
         width: 38%;
       }
+    }
+
+    .portfolio-detail {
+      max-width: 1000px;
     }
   }
 

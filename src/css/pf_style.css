@@ -708,14 +708,18 @@ header .material-icons {
 }
 
 #cont .portfolio-list figcaption {
-  padding: 20px;
+  max-width: 90%;
+  width: 100%;
+  margin: 6rem auto;
+  text-align: center;
+  text-align: left;
 }
 
-#cont .portfolio-list figcaption .text-basic {
-  margin-bottom: 40px;
+#cont .portfolio-list figcaption .text-basic:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
-#cont .portfolio-list figcaption .text-basic li {
+#cont .portfolio-list figcaption .text-basic li:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -773,7 +777,7 @@ header .material-icons {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 100px 20px;
+  padding: 6rem 0;
 }
 
 #cont .portfolio-detail p {
@@ -923,6 +927,9 @@ footer small {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  #cont .portfolio-list figcaption .text-basic:not(:last-child) {
+    margin-bottom: 0;
+  }
   #cont .portfolio-list figcaption ul {
     width: 47%;
   }
@@ -979,15 +986,13 @@ footer small {
     padding: 150px 0;
   }
   #cont .portfolio-list figcaption {
-    margin: 50px auto;
     max-width: 1200px;
-    text-align: left;
-    padding: 20px 0;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
   #cont .portfolio-list ul {
     width: 38%;
+  }
+  #cont .portfolio-detail {
+    max-width: 1000px;
   }
   footer ul {
     max-width: 1200px;
