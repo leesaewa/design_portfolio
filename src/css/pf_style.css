@@ -720,8 +720,11 @@ header .material-icons {
 }
 
 #cont .portfolio-list figcaption .text-basic h2 {
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
   position: relative;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 #cont .portfolio-list figcaption .text-basic h2::after {
@@ -775,7 +778,7 @@ header .material-icons {
 
 #cont .portfolio-detail p {
   line-height: 1.9;
-  word-break: keep-all;
+  word-break: break-all;
 }
 
 #cont .portfolio-detail p:not(:first-child) {
@@ -793,26 +796,34 @@ footer {
 }
 
 footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 50px auto 0;
-  padding: 0 20px;
-  max-width: 1200px;
+  border: 1px solid red;
+  max-width: 90%;
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 footer ul li {
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
+  border: 1px solid blue;
   font-size: 20px;
-  width: 50%;
-  margin-bottom: 30px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  position: relative;
+}
+
+footer ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+footer ul li a {
+  display: block;
+  padding: 4rem 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 footer ul li a:hover {
@@ -820,6 +831,11 @@ footer ul li a:hover {
   letter-spacing: 2px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+footer ul li a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 footer small {
@@ -844,9 +860,9 @@ footer small {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   #cont .portfolio-list figcaption ul {
     width: 47%;

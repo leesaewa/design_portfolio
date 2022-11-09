@@ -257,8 +257,10 @@ header {
         }
 
         h2 {
+          @include josefin;
           position: relative;
           margin-bottom: 20px;
+          text-transform: uppercase;
 
           &::after {
             content: "";
@@ -300,7 +302,7 @@ header {
 
     p {
       line-height: 1.9;
-      word-break: keep-all;
+      word-break: break-all;
 
       &:not(:first-child) {
         margin-top: 1rem;
@@ -319,20 +321,37 @@ footer {
   padding-top: 70px;
 
   ul {
-    @include flexbox($flexW: wrap, $flexJC: space-between);
-    margin: 50px auto 0;
-    padding: 0 20px;
-    max-width: 1200px;
+    border: 1px solid red;
+    @include widthSize($ws: 90%, $margin: 2rem);
 
     li {
+      @include josefin;
+      border: 1px solid blue;
       font-size: 20px;
-      width: 50%;
-      margin-bottom: 30px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 1.2rem;
+      position: relative;
 
-      a:hover {
-        color: $mainColor;
-        letter-spacing: 2px;
-        transition: all 0.5s ease;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      a {
+        display: block;
+        padding: 4rem 0;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:hover {
+          color: $mainColor;
+          letter-spacing: 2px;
+          transition: $easefive;
+        }
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -355,7 +374,7 @@ footer {
   #cont {
     .portfolio-list {
       figcaption {
-        @include flexbox($flexJC: space-between);
+        @include flexbox($flexJC: space-between, $flexAI: flex-start);
 
         ul {
           width: 47%;
