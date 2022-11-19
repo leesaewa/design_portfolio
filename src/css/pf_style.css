@@ -357,7 +357,7 @@ footer small {
   footer form {
     max-width: 900px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 0;
     text-align: center;
   }
 }
@@ -381,7 +381,7 @@ body {
 .row {
   max-width: 1500px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: center;
 }
 
@@ -528,7 +528,7 @@ header .material-icons {
   position: relative;
   max-width: 90%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -649,6 +649,7 @@ header .material-icons {
   position: relative;
   padding-left: 20px;
   margin: 2rem 0;
+  word-break: keep-all;
 }
 
 #cont .textbox .textbox-inner:after {
@@ -666,19 +667,20 @@ header .material-icons {
 }
 
 #cont #video {
-  width: 100%;
   max-width: 1200px;
-  margin: 0 auto 100px;
+  width: 100%;
+  margin: 0 auto 0;
+  text-align: center;
 }
 
 #cont #video .video-container {
-  border-radius: 30px;
+  border-radius: 2rem;
   background-color: #f0f0f0;
-  padding: 40px;
+  padding: 2rem;
   -webkit-box-shadow: 0px 8px 33px #999;
           box-shadow: 0px 8px 33px #999;
   position: relative;
-  margin-bottom: 200px;
+  margin-bottom: 6rem;
 }
 
 #cont #video .video-container:after {
@@ -707,10 +709,14 @@ header .material-icons {
   height: 100%;
 }
 
+#cont figure {
+  text-align: center;
+}
+
 #cont .portfolio-list figcaption {
   max-width: 90%;
   width: 100%;
-  margin: 6rem auto;
+  margin: 6rem auto 6rem;
   text-align: center;
   text-align: left;
 }
@@ -775,14 +781,14 @@ header .material-icons {
 #cont .portfolio-detail {
   max-width: 90%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: center;
   padding: 6rem 0;
 }
 
 #cont .portfolio-detail p {
   line-height: 1.9;
-  word-break: break-all;
+  word-break: keep-all;
 }
 
 #cont .portfolio-detail p:not(:first-child) {
@@ -802,7 +808,7 @@ footer {
 footer ul {
   max-width: 90%;
   width: 100%;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   text-align: center;
 }
 
@@ -982,8 +988,10 @@ footer small {
   #cont .textbox {
     max-width: 700px;
     width: 100%;
-    margin: 0 auto;
-    padding: 150px 0;
+    margin: 0 auto 0;
+    text-align: center;
+    padding: 10rem 0;
+    text-align: left;
   }
   #cont .portfolio-list figcaption {
     max-width: 1200px;
@@ -997,7 +1005,7 @@ footer small {
   footer ul {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 0;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;

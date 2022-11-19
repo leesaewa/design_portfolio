@@ -187,6 +187,7 @@ header {
       position: relative;
       padding-left: 20px;
       margin: 2rem 0;
+      word-break: keep-all;
 
       &:after {
         content: "";
@@ -206,17 +207,15 @@ header {
 
   /*video*/
   #video {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 100px;
+    @include widthSize($ws: 1200px);
 
     .video-container {
-      border-radius: 30px;
+      border-radius: 2rem;
       background-color: #f0f0f0;
-      padding: 40px;
+      padding: 2rem;
       box-shadow: 0px 8px 33px #999;
       position: relative;
-      margin-bottom: 200px;
+      margin-bottom: 6rem;
 
       &:after {
         content: "";
@@ -245,9 +244,13 @@ header {
     }
   }
 
+  figure {
+    text-align: center;
+  }
+
   .portfolio-list {
     figcaption {
-      @include widthSize($ws: 90%, $margin: 6rem);
+      @include widthSize($ws: 90%, $margin: 6rem, $marginB: 6rem);
       text-align: left;
 
       .text-basic {
@@ -307,7 +310,7 @@ header {
 
     p {
       line-height: 1.9;
-      word-break: break-all;
+      word-break: keep-all;
 
       &:not(:first-child) {
         margin-top: 1rem;
@@ -503,10 +506,9 @@ footer {
   /*cont list*/
   #cont {
     .textbox {
-      max-width: 700px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 150px 0;
+      @include widthSize($ws: 700px);
+      padding: 10rem 0;
+      text-align: left;
     }
 
     .portfolio-list {

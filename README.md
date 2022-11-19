@@ -8,7 +8,7 @@
 
 - start: 2021.10, end: 2021.11
 - added japanese: 2022.11.08
-- modify&update: start `221018`, end ``
+- modify&update: start `221018`, end `221119`
 
 ## Overview
 

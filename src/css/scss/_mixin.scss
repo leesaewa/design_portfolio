@@ -15,10 +15,10 @@
   grid-template-columns: repeat(auto-fill, minmax($minW, $maxW));
 }
 
-@mixin widthSize($ws: 1540px, $ta: center, $margin: 0) {
+@mixin widthSize($ws: 1540px, $ta: center, $margin: 0, $marginB: 0) {
   max-width: $ws;
   width: 100%;
-  margin: $margin auto;
+  margin: $margin auto $marginB;
   text-align: $ta;
 }
 

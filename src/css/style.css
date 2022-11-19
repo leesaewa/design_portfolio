@@ -422,7 +422,7 @@ main {
 #main {
   max-width: 90%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: center;
 }
 
@@ -502,7 +502,7 @@ main {
 #about .about-wrap {
   max-width: 90%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: center;
 }
 
@@ -527,7 +527,7 @@ main {
 #work {
   max-width: 90%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: center;
 }
 
@@ -733,7 +733,7 @@ main {
 #skill .skill-wrap {
   max-width: 90%;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: center;
 }
 
@@ -810,7 +810,7 @@ main {
 #skill .skill-wrap .experience-wrap .experience-wrap__box {
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: center;
 }
 
@@ -998,7 +998,7 @@ main {
   #main .visual-wrap .visual-wrap__box .visual-wrap__box-img {
     max-width: 500px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 0;
     text-align: center;
   }
   #about {
@@ -1023,7 +1023,7 @@ main {
             flex-direction: row-reverse;
     max-width: 1540px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 0;
     text-align: center;
   }
   #about .about-wrap .about-wrap__text {
@@ -1373,7 +1373,7 @@ footer small {
   footer form {
     max-width: 900px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 0;
     text-align: center;
   }
 }
@@ -1397,7 +1397,7 @@ body {
 .row {
   max-width: 1500px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 0;
   text-align: center;
 }
 
