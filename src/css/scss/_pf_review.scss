@@ -1,0 +1,442 @@
+//
+// common
+//
+
+.portfolio-detail__eff {
+  position: relative;
+
+  ul {
+    @include flexbox($flexJC: space-evenly);
+    padding: 4rem 0;
+
+    li {
+      h4 {
+        margin-bottom: 3.4rem;
+        border-bottom: 1px dashed $black;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .code-review {
+    margin-top: 4rem;
+
+    .code-review__box {
+      pre {
+        background-color: #eee;
+        text-align: left;
+        padding: 1rem;
+        white-space: break-spaces;
+        word-break: break-all;
+        xmp {
+          white-space: break-spaces;
+        }
+      }
+      p {
+        text-align: left;
+
+        samp {
+          background-color: #eee;
+          border-radius: 4px;
+          padding: 4px 6px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio-detail__eff {
+    .code-review {
+      @include flexbox($flexJC: space-between, $flexAI: flex-start);
+
+      .code-review__box {
+        width: 48%;
+      }
+    }
+  }
+}
+
+//
+//
+//
+//
+// bts
+//
+@mixin btsCommon {
+  content: "";
+  position: absolute;
+  background: $white;
+  transition: $easefive;
+}
+@keyframes animatedbang {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+.bts-hover {
+  font-size: 0;
+  height: 20vh;
+  @include flexbox();
+
+  p {
+    display: inline-block;
+    transition: $easefive;
+
+    &:hover {
+      border-radius: 50%;
+      padding: 10px;
+      background: rgba(146, 127, 186, 0.6);
+      animation: animatedbang 1.5s infinite;
+    }
+
+    a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: rgba(157, 53, 53, 0.8);
+      position: relative;
+      transition: $easefive;
+
+      &::before {
+        @include btsCommon();
+        top: 19px;
+        right: 28px;
+        width: 2px;
+        height: 20px;
+      }
+
+      &::after {
+        @include btsCommon();
+        top: 27px;
+        right: 18px;
+        width: 20px;
+        height: 2px;
+      }
+
+      &:hover {
+        background: #927fba;
+
+        &::before {
+          right: 27px;
+          top: 27px;
+          transform: rotate(45deg);
+          height: 10px;
+        }
+        &::after {
+          right: 23px;
+          top: 24px;
+          transform: rotate(45deg);
+          width: 10px;
+        }
+      }
+    }
+  }
+}
+
+// list
+.bts-list {
+  @include flexbox;
+  padding: 4rem 0 0;
+
+  .bts-list__wrap {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .img-hover {
+        opacity: 1;
+      }
+    }
+
+    .img-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 2;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .bts-list__hover {
+    padding: 20px 0 30px;
+
+    h3 {
+      background: #000;
+      color: #fff;
+      font-weight: bold;
+      display: inline-block;
+      width: 100px;
+      padding: 2px 0;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .bts-hover__ttl {
+      font-size: 16px;
+      padding: 10px;
+
+      span {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .color {
+      background: #141e2d;
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+//
+//
+//
+//
+// marautube
+//
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700");
+
+.marautube-align {
+  @include flexbox($flexJC: space-evenly, $flexW: wrap);
+
+  img {
+    max-width: 30%;
+  }
+}
+
+// cursor
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid $white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  margin: 0 auto;
+
+  .link-wrap {
+    display: block;
+  }
+
+  &.link-cursor {
+    transform: scale(2);
+    background-color: $white;
+
+    .link-wrap {
+      mix-blend-mode: normal !important;
+      display: block;
+      animation: rotateCircle 6s linear infinite;
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1px solid $white;
+
+      .cursor-rotate {
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: -7px;
+        width: 70px;
+        height: 65px;
+        border-color: $white;
+
+        &:last-child {
+          transform: scaleY(-1);
+        }
+
+        span {
+          text-transform: uppercase;
+          position: absolute;
+          color: $white;
+          font-size: 10px;
+          font-family: "Cinzel Decorative", cursive;
+          font-weight: bold;
+
+          &:nth-child(1) {
+            top: 20px;
+            left: -2px;
+            transform: rotate(-88deg);
+          }
+          &:nth-child(2) {
+            left: 8px;
+            top: 1px;
+            transform: rotate(-41deg);
+          }
+          &:nth-child(3) {
+            left: 27px;
+            top: -7px;
+            transform: rotate(-2deg);
+          }
+          &:nth-child(4) {
+            left: 51px;
+            top: -3px;
+            transform: rotate(40deg);
+          }
+          &:nth-child(5) {
+            left: 67px;
+            bottom: 41px;
+            transform: rotate(72deg);
+          }
+        }
+      }
+    }
+  }
+} //cursor
+
+// loading
+%position {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 140px;
+  height: 140px;
+}
+%border {
+  border: 1px dashed $black;
+  border-radius: 50%;
+}
+
+.loading-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 50vh;
+  margin-top: 2rem;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  background: url("https://marautube.herokuapp.com/paper.jpg") repeat 0 0;
+  transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 200%;
+    background: url("https://marautube.herokuapp.com/loading-bg.jpg") repeat
+      center center;
+    background-size: cover;
+    opacity: 0.2;
+    transform: rotate(35deg);
+  }
+
+  .ani {
+    background: url("https://marautube.herokuapp.com/loading.png") no-repeat 0 0;
+    background-size: 1287px 127px;
+    position: relative;
+    z-index: 99999999;
+    width: 127px;
+    height: 127px;
+    animation: loading 2000ms infinite steps(10);
+
+    .rotate-wrap {
+      animation: rotateCircle 6s linear infinite;
+      @extend %position;
+      transform-origin: 50% 50%;
+      @extend %border;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: 148px;
+        height: 148px;
+        @extend %border;
+      }
+
+      .rotate {
+        @extend %position;
+
+        &:last-child {
+          transform: scaleY(-1);
+        }
+
+        span {
+          text-transform: uppercase;
+          position: absolute;
+          color: $black;
+          font-family: "Cinzel Decorative", cursive;
+          font-weight: bold;
+
+          &:nth-child(1) {
+            top: 48px;
+            left: -15px;
+            transform: rotate(-76deg);
+          }
+          &:nth-child(2) {
+            left: -3px;
+            top: 21px;
+            transform: rotate(-60deg);
+          }
+          &:nth-child(3) {
+            left: 17px;
+            top: -2px;
+            transform: rotate(-39deg);
+          }
+          &:nth-child(4) {
+            left: 41px;
+            top: -17px;
+            transform: rotate(-19deg);
+          }
+          &:nth-child(5) {
+            left: 70px;
+            top: -22px;
+            transform: rotate(0deg);
+          }
+          &:nth-child(6) {
+            left: 98px;
+            top: -18px;
+            transform: rotate(21deg);
+          }
+          &:nth-child(7) {
+            left: 124px;
+            top: -6px;
+            transform: rotate(37deg);
+          }
+          &:nth-child(8) {
+            left: 142px;
+            top: 17px;
+            transform: rotate(55deg);
+          }
+          &:nth-child(9) {
+            left: 155px;
+            top: 47px;
+            transform: rotate(92deg);
+          }
+        }
+      }
+    }
+  }
+} //loading
+
+@keyframes loading {
+  100% {
+    background-position: -1287px 0;
+  }
+}
+
+@keyframes rotateCircle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
