@@ -5,6 +5,15 @@
 .portfolio-detail__eff {
   position: relative;
 
+  .sample {
+    margin-top: 2rem;
+    color: $violet;
+
+    span {
+      vertical-align: bottom;
+    }
+  }
+
   ul {
     @include flexbox($flexJC: space-evenly);
     padding: 4rem 0;
@@ -82,7 +91,7 @@
 }
 .bts-hover {
   font-size: 0;
-  height: 20vh;
+  height: 10vh;
   @include flexbox();
 
   p {

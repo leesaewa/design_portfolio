@@ -457,6 +457,15 @@ body {
   position: relative;
 }
 
+.portfolio-detail__eff .sample {
+  margin-top: 2rem;
+  color: #9a9ae1;
+}
+
+.portfolio-detail__eff .sample span {
+  vertical-align: bottom;
+}
+
 .portfolio-detail__eff ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -555,7 +564,7 @@ body {
 
 .bts-hover {
   font-size: 0;
-  height: 20vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
