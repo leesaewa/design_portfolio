@@ -1017,20 +1017,52 @@ body {
   text-transform: uppercase;
 }
 
-.btn-box .btn:hover {
-  background: #fff;
-  color: #0054ff;
-}
-
-.btn-box .btn:first-child {
+.btn-box .btn.btn__github {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 0;
   margin-bottom: 8px;
   border: 2px solid #9a9ae1;
   background-color: #9a9ae1;
 }
 
-.btn-box .btn:first-child:hover {
-  background: #fff;
+.btn-box .btn.btn__github svg {
+  width: 24px;
+  fill: #fff;
+  margin-right: 10px;
+}
+
+.btn-box .btn.btn__github:hover {
+  background-color: #fff;
   color: #9a9ae1;
+}
+
+.btn-box .btn.btn__point {
+  background-color: #ff8061;
+  border: 2px solid #ff8061;
+  margin-top: 8px;
+}
+
+.btn-box .btn.btn__point:hover {
+  color: #ff8061;
+}
+
+.btn-box .btn:hover {
+  background: #fff;
+  color: #0054ff;
+}
+
+.btn-box .btn:hover svg {
+  fill: #9a9ae1;
 }
 
 /*---------------------
@@ -1587,6 +1619,9 @@ footer small {
   }
   #cont .portfolio-detail {
     max-width: 1000px;
+  }
+  #cont .btn-box .btn.btn__point {
+    margin-top: 0;
   }
   footer ul {
     max-width: 1200px;

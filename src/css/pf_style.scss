@@ -22,19 +22,41 @@
     font-size: 1em;
     text-transform: uppercase;
 
-    &:hover {
-      background: $white;
-      color: $mainColor;
-    }
-
-    &:first-child {
+    &.btn__github {
+      @include flexbox;
+      padding: 14px 0;
       margin-bottom: 8px;
       border: 2px solid $violet;
       background-color: $violet;
 
+      svg {
+        width: 24px;
+        fill: $white;
+        margin-right: 10px;
+      }
+
       &:hover {
-        background: $white;
+        background-color: $white;
         color: $violet;
+      }
+    }
+
+    &.btn__point {
+      background-color: $point;
+      border: 2px solid $point;
+      margin-top: 8px;
+
+      &:hover {
+        color: $point;
+      }
+    }
+
+    &:hover {
+      background: $white;
+      color: $mainColor;
+
+      svg {
+        fill: $violet;
       }
     }
   }
@@ -558,6 +580,14 @@ footer {
 
     .portfolio-detail {
       max-width: 1000px;
+    }
+
+    .btn-box {
+      .btn {
+        &.btn__point {
+          margin-top: 0;
+        }
+      }
     }
   }
 
