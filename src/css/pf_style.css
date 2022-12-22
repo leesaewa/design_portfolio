@@ -1232,7 +1232,7 @@ header .material-icons {
   position: relative;
   padding-left: 20px;
   margin: 2rem 0;
-  word-break: keep-all;
+  word-break: break-word;
 }
 
 #cont .textbox .textbox-inner:after {
