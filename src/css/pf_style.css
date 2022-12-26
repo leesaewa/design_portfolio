@@ -1348,6 +1348,7 @@ header .material-icons {
   color: #0054ff;
   text-transform: uppercase;
   font-size: 12px;
+  text-align: center;
 }
 
 #cont .portfolio-list figcaption .text-basic .color span {
